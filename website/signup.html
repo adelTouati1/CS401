@@ -15,7 +15,7 @@
      <input class="MyButton" type="button" value="Sign Up" onclick="window.location.href='/home/adel/Desktop/website/signup.html'" />
      </form>
 
-    <img id="logo" src="/home/adel/Desktop/website/logo.jpg"
+    <img id="logo" src="~/Desktop/CS401-master/website/logo.jpg"
     alt="logo"/>
     </div>
     <div class="sub-nav cs401">
@@ -36,23 +36,21 @@
 
       </ul>
 </div>
-<form>
+<form action="SignupHandler.php" method="post">
      <fieldset>
 
    <label for="firstname">First Name:</label>
-   <input type="text" id="input" name="firstname">
+   <input type="text" id="input" name="firstName">
    <br>
    <label for="lastname">Last Name:</label>
-   <input type="text" id="input" name="lastname"><br>
+   <input type="text" id="input" name="lastName"><br>
    <label for="email">Email:</label>
    <input type="email" id="input" name="email"><br>
    <label for="password">Password:</label>
    <input type="password" id="input" name="password"><br>
 
 </fieldset>
-  </form>
-  <form>
-  <input class="MyButton" type="button" value="Sign up" />
+  <input type="submit" class="MyButton">
   </form>
   <div class="footer">
  <p>Photography Zone | Adel Touati</p>

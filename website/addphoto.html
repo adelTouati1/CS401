@@ -36,7 +36,7 @@
 
       </ul>
 </div>
-<form>
+<form action="imageHandler.php" method="post">
      <fieldset>
 
    <label for="location">Location:</label>
@@ -45,9 +45,9 @@
    <label for="imageupload" id="imageupload"> Select a image to upload:</label>
    <br>
    <label for="camera">Camera Brand:</label>
-   <input type="text" id="input" name="camera"><br>
+   <input type="text" id="input" name="cameraBrand"><br>
    <label for="lense">Lense size:</label>
-   <input type="text" id="input" name="lense"><br>
+   <input type="text" id="input" name="lenseSize"><br>
    <label for="focus">Focus:</label>
    <input type="text" id="input" name="focus"><br>
    <label for="Description">Description:</label>
@@ -56,9 +56,8 @@
 
 
 </fieldset>
-  </form>
-  <form>
-  <input class="MyButton" type="button" value="Publish Photo" />
+ 
+  <input class="MyButton" type="submit" value="Publish Photo" />
   </form>
   <div class="footer">
  <p>Photography Zone | Adel Touati</p>
