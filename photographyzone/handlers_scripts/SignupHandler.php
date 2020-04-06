@@ -33,12 +33,12 @@ $invalid = false;
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     // first name
-    if (empty($_POST["first_name"])) {
+    if (empty($_POST["firstName"])) {
         $nameErr = "first name is required";
         $_SESSION['nameErr'] = $nameErr;
         $invalid = true;
     } else {
-        $firstName = isInjected($_POST["first_name"]);
+        $firstName = isInjected($_POST["firstName"]);
         $_SESSION['preset_username'] = $firstName;
         if (!preg_match("/^[a-zA-Z ]*$/", $firstName)) {
             $nameErr = "Only letters and white space allowed\n";
@@ -48,12 +48,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     }
 
     // last name
-    if (empty($_POST["last_name"])) {
+    if (empty($_POST["lastName"])) {
         $nameErr = "last name is required";
         $_SESSION['nameErr'] = $nameErr;
         $invalid = true;
     } else {
-        $lastName = isInjected($_POST["last_name"]);
+        $lastName = isInjected($_POST["lastName"]);
         $_SESSION['preset_username'] = $lastName;
         if (!preg_match("/^[a-zA-Z ]*$/", $lastName)) {
             $nameErr = "Only letters and white space allowed\n";
@@ -69,7 +69,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $_SESSION['emailErr'] = $emailErr;
         $invalid = true;
     } else {
-        $_SESSION['preset_email'] = $email;
+        $_SESSION['email'] = $email;
     }
 
     if (empty($_POST["password"])) {
