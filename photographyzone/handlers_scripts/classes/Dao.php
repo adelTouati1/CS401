@@ -53,9 +53,9 @@ VALUES (:location, :cameraBrand, :lenseSize, :focus, :Description)";
     private function getConnection()
     {
         // Create PDO instance using MySQL connection string.
-       // $conn = new PDO("mysql:photographyZone={$this->dbname};host={$this->host};",
-          //  "$this->user", "$this->password");
-        $conn = mysqli_connect($host, $dbname, $user, $password);  
+        $conn = new PDO("mysql:photographyZone={$this->dbname};host={$this->host};",
+            "$this->user", "$this->password");
+        //$conn = mysqli_connect($host, $dbname, $user, $password);  
         return $conn;
     }
 

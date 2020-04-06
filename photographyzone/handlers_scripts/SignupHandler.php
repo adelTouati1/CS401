@@ -81,7 +81,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     }
 
     if ($invalid == true) {
-        header("Location:../Signup.html");
+        header("Location:../signup.html");
     } else {
         $dao->addUser($firstName, $lastName, $email, $password);
         header("Location:../login.html");
