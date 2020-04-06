@@ -14,7 +14,7 @@ class Dao
 
         $digest = $this->hashPassword($password);
 
-        $query = "INSERT INTO userSignUp (first_name, last_name, email, password)
+        $query = "INSERT INTO userSignUp (firstName, lastName, email, password)
 VALUES (:firstName, :lastName, :email, :password)";
 
         $stmt = $conn->prepare($query);
@@ -53,9 +53,9 @@ VALUES (:location, :cameraBrand, :lenseSize, :focus, :Description)";
     private function getConnection()
     {
         // Create PDO instance using MySQL connection string.
-        $conn = new PDO("mysql:photographyZone={$this->dbname};host={$this->host};",
-            "$this->user", "$this->password");
-        //$conn = mysqli_connect($host, $dbname, $user, $password);  
+        //$conn = new PDO("mysql:photographyZone={$this->dbname};host={$this->host};",
+          //  "$this->user", "$this->password");
+        $conn = mysqli_connect($host, $user, $password, $dbname);  
         return $conn;
     }
 
