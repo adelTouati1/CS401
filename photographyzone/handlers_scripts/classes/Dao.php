@@ -55,7 +55,11 @@ VALUES (:location, :cameraBrand, :lenseSize, :focus, :Description)";
         // Create PDO instance using MySQL connection string.
         //$conn = new PDO("mysql:photographyZone={$this->dbname};host={$this->host};",
           //  "$this->user", "$this->password");
-        $conn = mysqli_connect($host, $user, $password, $dbname);  
+        $conn = mysqli_connect($host, $user, $password, $dbname);
+        if (mysqli_connect_errno()) {
+            echo "Failed to connect to MySQL: " . mysqli_connect_error();
+            exit();
+          }  
         return $conn;
     }
 
