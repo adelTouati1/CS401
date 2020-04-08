@@ -5,8 +5,8 @@ class Dao
     //TODO: change when deploying to production
     private $host = "localhost";
     private $dbname = "photographyZone";
-    private $user = "Adel";
-    private $password = "Alg3ria>1122";
+    private $user = "root";
+    private $password = "Adel1234!";
 
     public function addUser($firstName, $lastName, $email, $password)
     {
@@ -55,7 +55,7 @@ VALUES (:location, :cameraBrand, :lenseSize, :focus, :Description)";
         // Create PDO instance using MySQL connection string.
         //$conn = new PDO("mysql:photographyZone={$this->dbname};host={$this->host};",
           //  "$this->user", "$this->password");
-        $conn = mysqli_connect($host, $user, $password, $dbname);
+        $conn = new mysqli($host, $user, $password, $dbname);
         if (mysqli_connect_errno()) {
             echo "Failed to connect to MySQL: " . mysqli_connect_error();
             exit();
