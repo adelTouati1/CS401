@@ -2,7 +2,7 @@
 
 class Dao
 {
-    private $host = 'localhost:3306';
+    private $host = 'localhost';
     private $dbname = 'photographyZone';
     private $user = 'root';
     private $password = 'Adel1234!';
@@ -43,8 +43,8 @@ class Dao
     {
         try {
 			return
-            $conn = new PDO("mysql:host=$host;dbname=$dbname", $user,
-                    $password);
+            $conn = new PDO("mysql:host={$this->host};dbname={$this->dbname}", $this->user,
+                    $this->password);
             $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);     
 		} catch (Exception $e) {
 			echo "connection failed: " . $e->getMessage();
