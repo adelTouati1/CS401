@@ -16,7 +16,7 @@ class Dao
     {
         try {
 			return
-            $connection = new PDO("psql:host={$this->host};port=5432;dbname={$this->dbname}", $this->user,
+            $connection = new PDO("pgsql:host={$this->host};port=5432;dbname={$this->dbname}", $this->user,
                     $this->password);
             $connection->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);  
             
