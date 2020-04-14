@@ -2,10 +2,28 @@
 
 class Dao
 {
-    private $host = 'localhost';
-    private $dbname = 'photographyZone';
-    private $user = 'root';
-    private $password = 'Adel1234!';
+    private $host = 'ec2-54-197-48-79.compute-1.amazonaws.com';
+    private $dbname = 'd8mmhag5m9ubs8';
+    private $user = 'updrlhawrqcpii';
+    private $password = '4776b9b884af923d41989afbed01ffccf9475f136344421e0b60800a3d81ddf7';
+
+
+       /**
+     * Establish DB connection
+     * @return PDO connection object
+     */
+    private function getConnection()
+    {
+        try {
+			return
+            $connection = new PDO("mysql:host={$this->host};port=5432;dbname={$this->dbname}", $this->user,
+                    $this->password);
+            $connection->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);  
+            
+		} catch (Exception $e) {
+			echo "connection failed: " . $e->getMessage();
+		}
+	}
 
     public function addUser($firstName, $lastName, $email, $password)
     {
@@ -35,22 +53,7 @@ class Dao
 		$query->execute();
     }
 
-    /**
-     * Establish DB connection
-     * @return PDO connection object
-     */
-    private function getConnection()
-    {
-        try {
-			return
-            $connection = new PDO("mysql:host={$this->host};dbname={$this->dbname}", $this->user,
-                    $this->password);
-            $connection->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);  
-            
-		} catch (Exception $e) {
-			echo "connection failed: " . $e->getMessage();
-		}
-	}
+ 
     
 
     /**
