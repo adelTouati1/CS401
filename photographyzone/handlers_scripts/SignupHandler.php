@@ -1,4 +1,5 @@
 <?php
+session_start();
 require_once('../classes/Dao.php');
 /**
  * Check the specified string for injection
