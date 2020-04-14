@@ -1,5 +1,5 @@
 <?php
-require_once('classes/Dao.php');
+require_once('../classes/Dao.php');
 /**
  * Check the specified string for injection
  * @param $str string to check for injection

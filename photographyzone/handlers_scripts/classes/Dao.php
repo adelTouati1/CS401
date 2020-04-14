@@ -10,40 +10,30 @@ class Dao
 
     public function addUser($firstName, $lastName, $email, $password)
     {
-        $conn = $this->getConnection();
-
+     
         $digest = $this->hashPassword($password);
-
-        $query = "INSERT INTO userSignUp (firstName, lastName, email, password)
-VALUES (:firstName, :lastName, :email, :password)";
-
-        $stmt = $conn->prepare($query);
-
-        $stmt->bindParam(":firstName", $firstName);
-        $stmt->bindParam(":lastName", $lastName);
-        $stmt->bindParam(":email", $email);
-        $stmt->bindParam(":password", $digest);
-
-        $stmt->execute();
+        $conn = $this->getConnection();
+		$query = $conn->prepare("INSERT INTO userSignUp (firstName, lastName, email, password)
+        VALUES (:firstName, :lastName, :email, :password)");
+		$query->bindParam(':firstName', $firstName);
+		$query->bindParam(':lastName', $lastName);
+		$query->bindParam(':email', $email);
+		$query->bindParam(':password', $digest);
+		$query->execute();
+        
     }
 
     public function addImage($location, $cameraBrand, $lenseSize, $focus, $Description)
     {
+       
         $conn = $this->getConnection();
-
-
-        $query = "INSERT INTO images (location, cameraBrand, lenseSize, focus, Description)
-VALUES (:location, :cameraBrand, :lenseSize, :focus, :Description)";
-
-        $stmt = $conn->prepare($query);
-
-        $stmt->bindParam(":location", $location);
-        $stmt->bindParam(":cameraBrand", $cameraBrand);
-        $stmt->bindParam(":lenseSize", $lenseSize);
-        $stmt->bindParam(":focus", $focus);
-        $stmt->bindParam(":Description", $Description);
-
-        $stmt->execute();
+		$query = $conn->prepare("INSERT INTO images (location, cameraBrand, lenseSize, focus, Description) VALUES (:location, :cameraBrand, :lenseSize, :focus, :Description)");
+		$query->bindParam(':location', $location);
+		$query->bindParam(':cameraBrand', $cameraBrand);
+		$query->bindParam(':lenseSize', $lenseSize);
+        $query->bindParam(':focus', $focus);
+        $query->bindParam(':Description', $Description);
+		$query->execute();
     }
 
     /**
@@ -52,23 +42,22 @@ VALUES (:location, :cameraBrand, :lenseSize, :focus, :Description)";
      */
     private function getConnection()
     {
-        // Create PDO instance using MySQL connection string.
-        //$conn = new PDO("mysql:photographyZone={$this->dbname};host={$this->host};",
-          //  "$this->user", "$this->password");
-        $conn = new mysqli($host, $user, $password, $dbname);
-        if (mysqli_connect_errno()) {
-            echo "Failed to connect to MySQL: " . mysqli_connect_error();
-            exit();
-          }  
-        return $conn;
-    }
+        try {
+			return
+				new PDO("mysql:host={$this->host};dbname={$this->db}", $this->user,
+					$this->password);
+		} catch (Exception $e) {
+			echo "connection failed: " . $e->getMessage();
+		}
+	}
+    
 
     /**
      * Hash the specified password
      * @param $password user password to hash
      * @return bool|string the specified password hashed
      */
-    public function hashPassword($password)
+    private function hashPassword($password)
     {
         $hash = password_hash($password, PASSWORD_BCRYPT);
         return $hash;
@@ -105,7 +94,7 @@ VALUES (:location, :cameraBrand, :lenseSize, :focus, :Description)";
     public function getFirstName($email)
     {
         $conn = $this->getConnection();
-        $query = "SELECT first_name FROM photographyZone WHERE email = :email";
+        $query = "SELECT firstName FROM photographyZone WHERE email = :email";
         $stmt = $conn->prepare($query);
         $stmt->bindParam(':email', $email);
         $stmt->execute();
