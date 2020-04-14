@@ -43,9 +43,9 @@ class Dao
     {
         try {
 			return
-            $conn = new PDO("mysql:host={$this->host};port=3306;dbname={$this->dbname}", $this->user,
+            $connection = new PDO("mysql:host={$this->host};dbname={$this->dbname}", $this->user,
                     $this->password);
-            $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);  
+            $connection->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);  
             
 		} catch (Exception $e) {
 			echo "connection failed: " . $e->getMessage();
