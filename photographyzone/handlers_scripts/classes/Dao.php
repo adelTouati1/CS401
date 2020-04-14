@@ -43,7 +43,7 @@ class Dao
     {
         try {
 			return
-            $conn = new PDO("mysql:host=$host:3306;dbname=$dbname", $user,
+            $conn = new PDO("mysql:host=$host;dbname=$dbname", $user,
                     $password);
             $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);     
 		} catch (Exception $e) {
