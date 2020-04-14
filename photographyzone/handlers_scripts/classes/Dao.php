@@ -2,9 +2,9 @@
 
 class Dao
 {
-    private $host = 'localhost:3306';
+    private $host = 'localhost';
     private $dbname = 'photographyZone';
-    private $user = 'root@localhost';
+    private $user = 'root';
     private $password = 'Adel1234!';
 
     public function addUser($firstName, $lastName, $email, $password)
@@ -43,7 +43,7 @@ class Dao
     {
         try {
 			return
-            $conn = new PDO("mysql:host={$this->host};dbname={$this->dbname}", $this->user,
+            $conn = new PDO("mysql:host={$this->host}:3306;dbname={$this->dbname}", $this->user,
                     $this->password);
             $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);     
 		} catch (Exception $e) {
