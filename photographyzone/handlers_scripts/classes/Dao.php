@@ -3,10 +3,10 @@
 class Dao
 {
     //TODO: change when deploying to production
-    private $host = "localhost:3306";
-    private $dbname = "photographyZone";
-    private $user = "root";
-    private $password = "Adel1234!";
+    private $host = 'localhost:3306';
+    private $dbname = 'photographyZone';
+    private $user = 'root';
+    private $password = 'Adel1234!';
 
     public function addUser($firstName, $lastName, $email, $password)
     {
