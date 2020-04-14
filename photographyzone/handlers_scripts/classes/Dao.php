@@ -2,7 +2,7 @@
 
 class Dao
 {
-    private $host = 'localhost';
+    private $host = 'localhost:3306';
     private $dbname = 'photographyZone';
     private $user = 'root';
     private $password = 'Adel1234!';
