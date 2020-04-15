@@ -20,6 +20,7 @@ require_once('classes/Dao.php');
 
   $description = $_POST["description"];
   $_SESSION["description"] = $description;
+  
   if ($dao->checkEmailExists($email)) {
     $dao->addImage($email, $location, $camerabrand, $lensesize, $focus, $description);
     header("Location:../index.html");

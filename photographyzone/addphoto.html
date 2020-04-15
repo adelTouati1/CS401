@@ -38,16 +38,17 @@
 
       </ul>
 </div>
-<form accept-charset="UTF-8" action="handlers_scripts/imagesHandler.php" class="new_message"
-id="new_message"
-method="post">
+<form action="/handlers_scripts/imagesHandler.php" id="addimage" method="post">
      <fieldset>
    <label for="email">Email:</label>
    <input type="email" id="email" name="email" required="required">
-   <label for="location">Location:</label>
-   <input type="text" id="location" name="location">
    <input type="file" id="imageupload" name="imageupload" accept="image/png, image/jpeg">
    <label for="imageupload" id="imageupload"> Select a image to upload:</label>
+   <br>
+
+   <label for="location">Location:</label>
+   <input type="text" id="location" name="location">
+
    <br>
    <label for="camerabrand">Camera Brand:</label>
    <input type="text" id="camerabrand" name="camerabrand"><br>
