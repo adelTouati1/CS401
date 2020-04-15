@@ -1,0 +1,142 @@
+body {
+  background-color: white;
+}
+
+button {
+margin-left: 10PX;
+margin-top: 10px;
+font-size: 20px;
+float: right;
+}
+.add{
+  margin-bottom: 10px;
+}
+input.MyButton {
+width: 150px;
+padding: 10px;
+cursor: pointer;
+font-weight: bold;
+font-size: 100%;
+background: #3366cc;
+color: #fff;
+border: 1px solid #3366cc;
+border-radius: 10px;
+float: right;
+margin-left: 10PX;
+}
+input.MyButton:hover {
+color: #ffff00;
+background: #000;
+border: 1px solid #fff;
+}
+.logButton{
+  width: 150px;
+  padding: 10px;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 100%;
+  background: #3366cc;
+  color: #fff;
+  border: 1px solid #3366cc;
+  border-radius: 10px;
+  float: right;
+ position: relative;
+ left: -30%;
+  margin-left: 10PX;
+}
+.footer {
+  margin-top: 50px;
+  position: absolute;
+  width: 100%;
+  background-color: white;
+  color: black;
+  text-align: center;
+}
+.sub-nav {
+    background-color: black;
+}
+.sub-nav > ul > li {
+  display: inline;
+}
+.sub-nav > ul > li > a:hover {
+  color: red;
+  text-decoration:underline;
+}
+#container {
+   min-height:100%;
+   position:relative;
+}
+.sub-nav > ul > li > a {
+  color: #F4F4F4;
+  padding: 0px 10px;
+  line-height: 25px;
+  text-decoration: none;
+  font-size: 20px;
+  letter-spacing: .1em;
+}
+.sub-nav {
+    margin-top: 1px;
+}
+.sub-nav {
+    background-color: black;
+    font-weight: 1000;
+    font-size: 25px;
+    letter-spacing: 10px;
+    text-transform: uppercase;
+}
+
+div {
+    display: block;
+}
+
+p {
+  color: #111111;
+  background-color: white;
+  margin: 0px 10%;
+  padding: 10px 20px;
+  line-height: 25px;
+  text-indent: 30px;
+  border-left: 1px #DDD solid;
+  border-right: 1px #DDD solid;
+}
+#logo{
+  max-height: 200px;
+  max-width: 50%;
+}
+.line {
+display: block;
+margin-top: 2%;
+margin-bottom: 2%;
+overflow: hidden;
+border-style: inset;
+border-width: 1px;
+}
+
+.row {
+  display: flex;
+
+}
+#imageupload{
+  float: right;
+  margin-right: 5px;
+}
+#inputlogin{
+  margin-bottom: 20px;
+}
+.logininput{
+  align-items: center;
+}
+#input{
+  margin-bottom: 5px;
+}
+.column {
+  flex: 33.33%;
+  padding: 5px;
+}
+
+
+h1 {
+  text-align: center;
+  font-size: 50px;
+  font-family: monospace;
+}
