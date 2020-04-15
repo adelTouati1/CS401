@@ -3,6 +3,9 @@ session_start();
 require_once('classes/Dao.php');
   $dao = new Dao();
 
+  $email = $_POST["email"];
+  $_SESSION["email"] = $email;
+
   $location = $_POST["location"];
   $_SESSION["location"] = $location;
 
@@ -17,7 +20,12 @@ require_once('classes/Dao.php');
 
   $description = $_POST["description"];
   $_SESSION["description"] = $description;
- 
-  $dao->addImage($location, $camerabrand, $lensesize, $focus, $description);
+  if ($dao->checkEmailExists($email)) {
+    $dao->addImage($email, $location, $camerabrand, $lensesize, $focus, $description);
+    header("Location:../index.html");
+  }else{
+    header("Location:../signup.html");
+  } 
+  
 
   exit;
