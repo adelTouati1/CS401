@@ -15,17 +15,17 @@ require_once('classes/Dao.php');
   $_SESSION["email"] = $email;
  
 
-  $password1 = $_POST["password1"];
+  $password = $_POST["password"];
   
   if ($dao->checkEmailExists($email)) {
     $_SESSION["error1"] = "Email already taken!";
   } 
 
   if (isset($_SESSION["error1"])){
-    header("Location:../signup.php");
+    header("Location:../signup.html");
   } else {
     echo "Account Created.";
-    $dao->addUser($firstName, $lastName, $email, $password);
+    $dao->addUser($firstname, $lastname, $email, $password);
     header("Location:../login.html");
   }
   exit;

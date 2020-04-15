@@ -17,6 +17,7 @@ require_once('classes/Dao.php');
 
   $description = $_POST["description"];
   $_SESSION["description"] = $description;
-  
+ 
+  $dao->addImage($location, $camerabrand, $lensesize, $focus, $description);
 
   exit;
