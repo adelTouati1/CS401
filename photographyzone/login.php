@@ -1,6 +1,7 @@
 <?php
 require_once('handlers_scripts/LoginHandler.php');
 ?>
+<html>
 <div id="container">
   <head>
     <title>Photography Zone</title>
@@ -55,4 +56,4 @@ method="post">
   </body>
 
 </div>
-
+</html>

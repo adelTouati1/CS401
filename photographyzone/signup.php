@@ -1,6 +1,7 @@
 <?php
 require_once('handlers_scripts/SignupHandler.php');
 ?>
+<html>
 <div id="container">
   <head>
     <title>Photography Zone</title>
@@ -13,7 +14,7 @@ require_once('handlers_scripts/SignupHandler.php');
    <div>
 
      <form>
-     <input class="MyButton" type="button" value="Login" onclick="window.location.href='login.php';" />
+     <input class="MyButton" type="button" value="Login" onclick="window.location.href='login.php'" />
      <input class="MyButton" type="button" value="Sign Up" onclick="window.location.href='signup.php'" />
      </form>
 
@@ -59,4 +60,4 @@ require_once('handlers_scripts/SignupHandler.php');
   </div>
   </body>
 </div>
-
+</html>

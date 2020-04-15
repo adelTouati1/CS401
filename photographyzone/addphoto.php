@@ -1,6 +1,7 @@
 <?php
 require_once('handlers_scripts/imagesHandler.php');
 ?>
+<html>
 <div id="container">
   <head>
     <title>Photography Zone</title>
@@ -68,4 +69,4 @@ method="post">
   </div>
   </body>
 </div>
-
+</html>
