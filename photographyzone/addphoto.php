@@ -1,6 +1,4 @@
-<?php
-require_once('handlers_scripts/imagesHandler.php');
-?>
+
 <html>
 <div id="container">
   <head>
@@ -13,11 +11,14 @@ require_once('handlers_scripts/imagesHandler.php');
 
    <div>
 
-     <form>
+     <form method="get">
      <input class="MyButton" type="button" value="Login" onclick="window.location.href='login.php'" />
      <input class="MyButton" type="button" value="Sign Up" onclick="window.location.href='signup.php'" />
      </form>
 
+     <?php
+      require_once('handlers_scripts/imagesHandler.php');
+      ?>
     <img id="logo" src="logo.jpg"
     alt="logo"/>
     </div>
