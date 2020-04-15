@@ -25,35 +25,43 @@ class Dao
 		}
 	}
 
-    public function addUser($firstName, $lastName, $email, $password)
+    public function addUser($firstname, $lastname, $email, $password)
     {
      
         $digest = $this->hashPassword($password);
         $conn = $this->getConnection();
-		$query = $conn->prepare("INSERT INTO userSignUp (firstName, lastName, email, password)
-        VALUES (:firstName, :lastName, :email, :password)");
-		$query->bindParam(':firstName', $firstName);
-		$query->bindParam(':lastName', $lastName);
+		$query = $conn->prepare("INSERT INTO userSignUp (firstname, lastname, email, password)
+        VALUES (:firstname, :lastname, :email, :password)");
+		$query->bindParam(':firstname', $firstname);
+		$query->bindParam(':lastname', $lastname);
 		$query->bindParam(':email', $email);
 		$query->bindParam(':password', $digest);
 		$query->execute();
         
     }
 
-    public function addImage($location, $cameraBrand, $lenseSize, $focus, $Description)
+    public function addImage($location, $camerabrand, $lensesize, $focus, $description)
     {
        
         $conn = $this->getConnection();
-		$query = $conn->prepare("INSERT INTO images (location, cameraBrand, lenseSize, focus, Description) VALUES (:location, :cameraBrand, :lenseSize, :focus, :Description)");
+		$query = $conn->prepare("INSERT INTO images (location, camerabrand, lensesize, focus, description) VALUES (:location, :cameraBrand, :lenseSize, :focus, :Description)");
 		$query->bindParam(':location', $location);
-		$query->bindParam(':cameraBrand', $cameraBrand);
-		$query->bindParam(':lenseSize', $lenseSize);
+		$query->bindParam(':camerabrand', $camerabrand);
+		$query->bindParam(':lensesize', $lensesize);
         $query->bindParam(':focus', $focus);
-        $query->bindParam(':Description', $Description);
+        $query->bindParam(':description', $description);
 		$query->execute();
     }
 
- 
+    public function getFirstName($email)
+    {
+        $conn = $this->getConnection();
+        $query = "SELECT firstname FROM userSignUp WHERE email = :email";
+        $stmt = $conn->prepare($query);
+        $stmt->bindParam(':email', $email);
+        $stmt->execute();
+        return $stmt->fetch();
+    }
     
 
     /**
@@ -77,7 +85,7 @@ class Dao
     {
 
         $conn = $this->getConnection();
-        $stmt = $conn->prepare("SELECT password FROM photographyZone WHERE email= :email");
+        $stmt = $conn->prepare("SELECT password FROM userSignUp WHERE email= :email");
 
         $stmt->bindParam(':email', $email);
         $stmt->execute();
@@ -86,37 +94,15 @@ class Dao
         if (!$row) {
             return false;
         }
-        $digest = $row['password'];
+        $digest = $this->hashPassword($password);;
         return password_verify($password, $digest);
     }
-
-    /**
-     * Get the first name of the user with the specified email
-     * @param $email
-     * @return mixed
-     */
-    public function getFirstName($email)
-    {
-        $conn = $this->getConnection();
-        $query = "SELECT firstName FROM photographyZone WHERE email = :email";
-        $stmt = $conn->prepare($query);
-        $stmt->bindParam(':email', $email);
-        $stmt->execute();
-        return $stmt->fetch();
-    }
-
-
-    public function getUserInfo($email)
-    {
-        $conn = $this->getConnection();
-
-        $query = "SELECT * FROM photographyZone WHERE email = :email";
-        // Create the prepared statement
-        $stmt = $conn->prepare($query);
-
-        $stmt->bindParam(':email', $email);
-        $stmt->execute();
-        // And return the result (an array of rows).
-        return $stmt->fetch();
-    }
+	public function checkEmailExists ($email) {
+		$conn = $this->getConnection();
+		$query = $conn->prepare("SELECT email FROM userSignUp WHERE email = :email");
+		$query->setFetchMode(PDO::FETCH_ASSOC);
+		$query->bindParam(':email', $email);
+		$query->execute();
+		return $query->rowCount() > 0;
+	}
 }

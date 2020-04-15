@@ -1,4 +1,6 @@
-<html>
+<?php
+require_once('handlers_scripts/LoginHandler.php');
+?>
 <div id="container">
   <head>
     <title>Photography Zone</title>
@@ -36,26 +38,21 @@
 
       </ul>
 </div>
-<form>
-     <fieldset>
-
-
-   <label for="Description">Message:</label><br>
-   <textarea rows="5" cols="80" id="input"></textarea><br>
-   <label for="email">Email:</label>
-   <input type="email" id="input" name="email"><br>
-
-
-
-</fieldset>
-  </form>
-  <form>
-  <input class="MyButton" type="button" value="Send" />
+<form accept-charset="UTF-8" action="handlers_scripts/LoginHandler.php" class="new_message" id="new_message"
+method="post">
+<div align="center">
+<label for="email">Email:</label>
+<input type="email" id="inputlogin" name="email" required="required"><br>
+<label for="password">Passwrod:</label>
+<input type="password" id="inputlogin" name="Password" required="required"> <br>
+</div>
+  <input  class="logButton" type="submit" value="Login" name="commit">
   </form>
   <div class="footer">
  <p>Photography Zone | Adel Touati</p>
   </div>
+
   </body>
 
 </div>
-</html>
+

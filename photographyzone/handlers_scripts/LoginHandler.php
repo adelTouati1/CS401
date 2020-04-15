@@ -11,7 +11,7 @@ $validUser = $dao->validateUser($email, $password);
 if ($validUser) {
     session_start();
     $_SESSION['AUTH'] = TRUE;
-    $_SESSION['name'] = $dao->getFirstName($email)['first_name'];
+    $_SESSION['name'] = $dao->getFirstName($email)['firstname'];
 //TODO: more to come
     header("Location:../index.html");
 } else {

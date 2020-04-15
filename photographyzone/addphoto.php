@@ -1,4 +1,6 @@
-<html>
+<?php
+require_once('handlers_scripts/imagesHandler.php');
+?>
 <div id="container">
   <head>
     <title>Photography Zone</title>
@@ -36,26 +38,34 @@
 
       </ul>
 </div>
-<form>
+<form accept-charset="UTF-8" action="handlers_scripts/imagesHandler.php" class="new_message"
+id="new_message"
+method="post">
      <fieldset>
 
-
-   <label for="Description">Message:</label><br>
-   <textarea rows="5" cols="80" id="input"></textarea><br>
-   <label for="email">Email:</label>
-   <input type="email" id="input" name="email"><br>
+   <label for="location">Location:</label>
+   <input type="text" id="location" name="location">
+   <input type="file" id="imageupload" name="imageupload" accept="image/png, image/jpeg">
+   <label for="imageupload" id="imageupload"> Select a image to upload:</label>
+   <br>
+   <label for="camerabrand">Camera Brand:</label>
+   <input type="text" id="camerabrand" name="camerabrand"><br>
+   <label for="lensesize">Lense size:</label>
+   <input type="text" id="lensesize" name="lensesize"><br>
+   <label for="focus">Focus:</label>
+   <input type="text" id="focus" name="focus"><br>
+   <label for="description">Description:</label>
+   <input type="text" id="description" name="description" rows="3"><br>
 
 
 
 </fieldset>
-  </form>
-  <form>
-  <input class="MyButton" type="button" value="Send" />
+ 
+  <input class="MyButton" type="submit" value="Publish Photo" name="commit">
   </form>
   <div class="footer">
  <p>Photography Zone | Adel Touati</p>
   </div>
   </body>
-
 </div>
-</html>
+

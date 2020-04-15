@@ -13,8 +13,8 @@ require_once('handlers_scripts/SignupHandler.php');
    <div>
 
      <form>
-     <input class="MyButton" type="button" value="Login" onclick="window.location.href='login.html'" />
-     <input class="MyButton" type="button" value="Sign Up" onclick="window.location.href='signup.html'" />
+     <input class="MyButton" type="button" value="Login" onclick="window.location.href='login.php'" />
+     <input class="MyButton" type="button" value="Sign Up" onclick="window.location.href='signup.php'" />
      </form>
 
     <img id="logo" src="logo.jpg"
@@ -41,11 +41,11 @@ require_once('handlers_scripts/SignupHandler.php');
 <form action="/handlers_scripts/SignupHandler.php" id="register" method="post">
      <fieldset>
 
-   <label for="firstName">First Name:</label>
-   <input type="text" id="firstName" name="firstName">
+   <label for="firstname">First Name:</label>
+   <input type="text" id="firstname" name="firstname">
    <br>
-   <label for="lastName">Last Name:</label>
-   <input type="text" id="lastName" name="lastName"><br>
+   <label for="lastname">Last Name:</label>
+   <input type="text" id="lastname" name="lastname"><br>
    <label for="email">Email:</label>
    <input type="email" id="email" name="email"><br>
    <label for="password">Password:</label>
