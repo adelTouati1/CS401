@@ -28,7 +28,7 @@ class Dao
     public function addUser($firstname, $lastname, $email, $password)
     {
      
-        $digest = password_hash($password, PASSWORD_DEFAULT);
+        $hash = password_hash($password, PASSWORD_DEFAULT);
         $conn = $this->getConnection();
 		$query = $conn->prepare("INSERT INTO userSignUp (firstname, lastname, email, password)
         VALUES (:firstname, :lastname, :email, :password)");
