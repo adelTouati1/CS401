@@ -1,5 +1,5 @@
 <?php
-include_once('index.php');
+include('index.php');
  session_start(); ?>
 
 <!DOCTYPE html> 
@@ -15,7 +15,7 @@ include_once('index.php');
      <form>
      <?php if ($_SESSION['AUTH']): ?>
 
-    <MARQUEE bgcolor=white loop="-1" scrollamount="2" width="100%"><?php echo $_SESSION['name'] ?></MARQUEE>
+    <MARQUEE bgcolor=white loop="-1" scrollamount="2" width="100%">Welcom <?php echo $_SESSION['name'] ?></MARQUEE>
     <input class="MyButton" type="button" value="Log out" onclick="href='Logout.php'"/>
     <?php else: ?>
      <input class="MyButton" type="button" value="Login" onclick="window.location.href='login.html'" />
