@@ -16,7 +16,8 @@ include_once('index.php');
      <?php if ($_SESSION['AUTH']): ?>
       <li>
     <!-- Display user name -->
-    <a class="deep-purple-text"> <?php echo $_SESSION['name'] ?></a>
+    <a class="MyButton"> <?php echo $_SESSION['name'] ?></a>
+    <input class="MyButton" type="button" value="Log out" onclick="href='Logout.php'"/>
     <?php else: ?>
      <input class="MyButton" type="button" value="Login" onclick="window.location.href='login.html'" />
      <input class="MyButton" type="button" value="Sign Up" onclick="javascript:window.location.href='signup.html'" />
