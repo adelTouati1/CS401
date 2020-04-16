@@ -28,7 +28,7 @@ class Dao
     public function addUser($firstname, $lastname, $email, $password)
     {
      
-        $digest = $this->hashPassword($password);
+        $digest = password_hash($password, PASSWORD_DEFAULT);
         $conn = $this->getConnection();
 		$query = $conn->prepare("INSERT INTO userSignUp (firstname, lastname, email, password)
         VALUES (:firstname, :lastname, :email, :password)");
@@ -92,12 +92,11 @@ class Dao
         $stmt->bindParam(':email', $email);
         $stmt->execute();
 
-        $row = $stmt->fetch();
+        $row = $stmt->fetch()[0];
         if (!$row) {
             return false;
         }
-        $digest = $this->hashPassword($password);
-        return password_verify($digest, $row);
+        return password_verify($password, $row);
     }
 	public function checkEmailExists ($email) {
 		$conn = $this->getConnection();
