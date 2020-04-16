@@ -34,8 +34,9 @@ class Dao
         VALUES (:firstname, :lastname, :email, :password)");
 		$query->bindParam(':firstname', $firstname);
 		$query->bindParam(':lastname', $lastname);
-		$query->bindParam(':email', $email);
-		$query->bindParam(':password', $digest);
+        $query->bindParam(':email', $email);
+        $hash = password_hash($password, PASSWORD_DEFAULT);
+		$query->bindParam(':password', $hash);
 		$query->execute();
         
     }
@@ -64,18 +65,6 @@ class Dao
         $stmt->execute();
         return $stmt->fetch();
     }
-    
-
-    /**
-     * Hash the specified password
-     * @param $password user password to hash
-     * @return bool|string the specified password hashed
-     */
-    private function hashPassword($password)
-    {
-        $hash = password_hash($password, PASSWORD_BCRYPT);
-        return $hash;
-    }
 
     /**
      * Check to see if the specified email and password are valid
@@ -92,11 +81,11 @@ class Dao
         $stmt->bindParam(':email', $email);
         $stmt->execute();
 
-        $row = $stmt->fetch()[0];
-        if (!$row) {
+        $hash = $stmt->fetch()[0];
+        if (!$hash) {
             return false;
         }
-        return password_verify($password, $row);
+        return password_verify($password, $hash);
     }
 	public function checkEmailExists ($email) {
 		$conn = $this->getConnection();
