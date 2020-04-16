@@ -13,7 +13,7 @@ if ($validUser) {
     $_SESSION['AUTH'] = TRUE;
     $_SESSION['name'] = $dao->getFirstName($email)['firstname'];
 //TODO: more to come
-    header("Location:../index.html");
+    header("Location:../index.php");
 } else {
     echo "IT IS NOT WORKING";
     $_SESSION['AUTH'] = FALSE;
