@@ -27,8 +27,6 @@ class Dao
 
     public function addUser($firstname, $lastname, $email, $password)
     {
-     
-        $hash = password_hash($password, PASSWORD_DEFAULT);
         $conn = $this->getConnection();
 		$query = $conn->prepare("INSERT INTO userSignUp (firstname, lastname, email, password)
         VALUES (:firstname, :lastname, :email, :password)");
@@ -82,10 +80,10 @@ class Dao
         $stmt->execute();
 
         $hash = $stmt->fetch();
-        $hash = substr( $hash, 0, 60 );
         if (!$hash) {
             return false;
         }
+        
         return password_verify($password, $hash);
     }
 	public function checkEmailExists ($email) {
