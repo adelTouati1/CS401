@@ -1,6 +1,5 @@
 <?php
 include_once('index.php');
-require_once('Logout.php');
  session_start(); ?>
 
 <!DOCTYPE html> 
@@ -17,7 +16,7 @@ require_once('Logout.php');
      <?php if ($_SESSION['AUTH']): ?>
 
     <MARQUEE bgcolor=white loop="-1" scrollamount="2" width="100%">Welcome: <?php echo $_SESSION['name'] ?></MARQUEE>
-    <input class="MyButton" type="button" value="Log out" onclick="href='Logout.php'"/>
+    <input class="MyButton" type="button" value="Log out" onclick="<?php $_SESSION['AUTH']=false; header("Location:index.php"); ?>"/>
     <?php else: ?>
      <input class="MyButton" type="button" value="Login" onclick="window.location.href='login.html'" />
      <input class="MyButton" type="button" value="Sign Up" onclick="javascript:window.location.href='signup.html'" />
