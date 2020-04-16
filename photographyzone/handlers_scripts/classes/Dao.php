@@ -81,7 +81,7 @@ class Dao
         $stmt->bindParam(':email', $email);
         $stmt->execute();
 
-        $hash = $stmt->fetch()[0];
+        $hash = $stmt->fetch();
         if (!$hash) {
             return false;
         }
