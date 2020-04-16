@@ -89,7 +89,7 @@ class Dao
         if (!$row) {
             return false;
         }
-        $hash = $row['password'];
+        $hash = $this->hashPassword($password);
         return password_verify($password, $hash);
     }
 	public function checkEmailExists ($email) {
