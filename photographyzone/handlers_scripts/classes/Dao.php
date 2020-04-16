@@ -96,8 +96,8 @@ class Dao
         if (!$row) {
             return false;
         }
-        $digest = $row['password'];
-        return password_verify($password, $digest);
+        //$digest = $row['password'];
+        return password_verify($password, $row);
     }
 	public function checkEmailExists ($email) {
 		$conn = $this->getConnection();
