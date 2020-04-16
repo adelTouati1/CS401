@@ -26,7 +26,7 @@ include_once('index.php');
     
 
     <img id="logo" src="logo.jpg"
-    alt="logo" href="index.php"/>
+    alt="logo" onclick="window.location.href='index.php'"/>
     </div>
     <div class="sub-nav cs401">
   <ul>
