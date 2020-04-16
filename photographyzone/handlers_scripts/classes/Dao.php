@@ -28,12 +28,12 @@ class Dao
     public function addUser($firstname, $lastname, $email, $password)
     {
         $conn = $this->getConnection();
+        $hash = $this->hashPassword($password);
 		$query = $conn->prepare("INSERT INTO userSignUp (firstname, lastname, email, password)
         VALUES (:firstname, :lastname, :email, :password)");
 		$query->bindParam(':firstname', $firstname);
 		$query->bindParam(':lastname', $lastname);
         $query->bindParam(':email', $email);
-        $hash = password_hash($password, PASSWORD_DEFAULT);
 		$query->bindParam(':password', $hash);
 		$query->execute();
         
@@ -64,6 +64,12 @@ class Dao
         return $stmt->fetch();
     }
 
+    public function hashPassword($password)
+    {
+        $hash = password_hash($password, PASSWORD_BCRYPT);
+        return $hash;
+    }
+
     /**
      * Check to see if the specified email and password are valid
      * @param $email user email to validate
@@ -79,8 +85,11 @@ class Dao
         $stmt->bindParam(':email', $email);
         $stmt->execute();
 
-        $hash = $stmt->fetch()[0];
-    
+        $row = $stmt->fetch();
+        if (!$row) {
+            return false;
+        }
+        $hash = $row['password'];
         return password_verify($password, $hash);
     }
 	public function checkEmailExists ($email) {

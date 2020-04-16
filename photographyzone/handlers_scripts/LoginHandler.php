@@ -3,8 +3,8 @@ require_once("classes/Dao.php");
 $dao = new Dao();
 
 // Get email and password
-$email = htmlentities($_POST["email"]);
-$password = $_POST["password"];
+$email = htmlentities($_POST['email']);
+$password = $_POST['password'];
 
 // sanitize & validate it
 $validUser = $dao->validateUser($email, $password);
