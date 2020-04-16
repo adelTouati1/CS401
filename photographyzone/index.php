@@ -13,10 +13,11 @@ include_once('index.php');
     <hr/>
    <div>
      <form>
+
      <?php if ($_SESSION['AUTH']): ?>
 
     <MARQUEE bgcolor=white loop="-1" scrollamount="2" width="100%">Welcome: <?php echo $_SESSION['name'] ?></MARQUEE>
-    <input class="MyButton" type="button" value="Log out" onclick="href='Logout.php'"/>
+    <input class="MyButton" type="button" value="Log out" onclick="window.location.href='Logout.php'"/>
     <?php else: ?>
      <input class="MyButton" type="button" value="Login" onclick="window.location.href='login.html'" />
      <input class="MyButton" type="button" value="Sign Up" onclick="javascript:window.location.href='signup.html'" />
