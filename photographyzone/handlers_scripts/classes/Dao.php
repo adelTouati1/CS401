@@ -79,11 +79,8 @@ class Dao
         $stmt->bindParam(':email', $email);
         $stmt->execute();
 
-        $hash = $stmt->fetch();
-        if (!$hash) {
-            return false;
-        }
-        
+        $hash = $stmt->fetch()[0];
+    
         return password_verify($password, $hash);
     }
 	public function checkEmailExists ($email) {
