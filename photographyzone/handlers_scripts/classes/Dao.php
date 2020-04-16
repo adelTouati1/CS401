@@ -87,7 +87,7 @@ class Dao
     {
 
         $conn = $this->getConnection();
-        $stmt = $conn->prepare("SELECT password FROM userSignUp WHERE email= :email");
+        $stmt = $conn->prepare("SELECT password FROM userSignUp WHERE email = :email");
 
         $stmt->bindParam(':email', $email);
         $stmt->execute();
@@ -96,7 +96,7 @@ class Dao
         if (!$row) {
             return false;
         }
-        $digest = $this->hashPassword($password);;
+        $digest = $row['password'];
         return password_verify($password, $digest);
     }
 	public function checkEmailExists ($email) {
