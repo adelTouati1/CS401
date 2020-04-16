@@ -1,4 +1,9 @@
 
+<?php
+include_once('index.php');
+ session_start(); ?>
+
+<!DOCTYPE html> 
 <html>
 <div id="container">
   <head>
@@ -12,9 +17,16 @@
    <div>
 
      <form>
+     <?php if ($_SESSION['AUTH']): ?>
+
+<li>
+    <!-- Display user name -->
+    <a class="deep-purple-text"> <?php echo $_SESSION['name'] ?></a>
+    <?php else: ?>
      <input class="MyButton" type="button" value="Login" onclick="window.location.href='login.html'" />
      <input class="MyButton" type="button" value="Sign Up" onclick="window.location.href='signup.html'" />
-     </form>
+    <?php endif; ?>
+    </form>
 
     <img id="logo" src="logo.jpg"
     alt="logo"/>
