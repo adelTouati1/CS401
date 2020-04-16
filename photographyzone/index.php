@@ -26,22 +26,22 @@ include_once('index.php');
     
 
     <img id="logo" src="logo.jpg"
-    alt="logo"/>
+    alt="logo" href="index.php"/>
     </div>
     <div class="sub-nav cs401">
   <ul>
           <li class="spacer-401">&nbsp;</li>
             <li>
-      <a href="index.html">Browse</a>
+      <a href="index.php">Browse</a>
     </li>
     <li id="current-page">
-      <a href="portrait.html">Portrait</a>
+      <a href="portrait.php">Portrait</a>
     </li>
     <li>
-      <a href="blog.html">Blog</a>
+      <a href="blog.php">Blog</a>
     </li>
     <li>
-      <a href="contact.html">Contact</a>
+      <a href="contact.php">Contact</a>
     </li>
 
       </ul>
@@ -70,7 +70,7 @@ include_once('index.php');
 </div>
 <div class="add">
       <form>
-      <input class="MyButton" type="button" value="Add Photo" onclick="window.location.href='addphoto.html'" />
+      <input class="MyButton" type="button" value="Add Photo" onclick="window.location.href='addphoto.php'" />
       </form>
 </div>
 <div class="line"> </div>

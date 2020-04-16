@@ -1,4 +1,7 @@
+<?php
+ session_start(); ?>
 
+<!DOCTYPE html> 
 <html>
 <div id="container">
   <head>
@@ -7,33 +10,37 @@
   </head>
   <body>
     <hr/>
-
-
    <div>
+     <form>
 
-     <form method="get">
+     <?php if ($_SESSION['AUTH']): ?>
+
+    <MARQUEE bgcolor=white loop="-1" scrollamount="2" width="100%"> <?php echo $_SESSION['name'] ?></MARQUEE>
+    <input class="MyButton" type="button" value="Log out" onclick="window.location.href='Logout.php'"/>
+    <?php else: ?>
      <input class="MyButton" type="button" value="Login" onclick="window.location.href='login.html'" />
-     <input class="MyButton" type="button" value="Sign Up" onclick="window.location.href='signup.html'" />
-     </form>
+     <input class="MyButton" type="button" value="Sign Up" onclick="javascript:window.location.href='signup.html'" />
+     <?php endif; ?>
+    </form>
+    
 
-  
     <img id="logo" src="logo.jpg"
-    alt="logo"/>
+    alt="logo" href="index.php"/>
     </div>
     <div class="sub-nav cs401">
   <ul>
           <li class="spacer-401">&nbsp;</li>
             <li>
-      <a href="index.html">Browse</a>
+      <a href="index.php">Browse</a>
     </li>
     <li id="current-page">
-      <a href="portrait.html">Portrait</a>
+      <a href="portrait.php">Portrait</a>
     </li>
     <li>
-      <a href="blog.html">Blog</a>
+      <a href="blog.php">Blog</a>
     </li>
     <li>
-      <a href="contact.html">Contact</a>
+      <a href="contact.php">Contact</a>
     </li>
 
       </ul>
