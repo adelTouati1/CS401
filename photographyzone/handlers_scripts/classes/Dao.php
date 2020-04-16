@@ -82,6 +82,7 @@ class Dao
         $stmt->execute();
 
         $hash = $stmt->fetch();
+        $hash = substr( $hash, 0, 60 );
         if (!$hash) {
             return false;
         }
