@@ -1,5 +1,6 @@
 <?php
 include_once('index.php');
+require_once('Logout.php');
  session_start(); ?>
 
 <!DOCTYPE html> 
