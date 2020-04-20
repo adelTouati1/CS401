@@ -2,10 +2,10 @@
 
 class Dao
 {
-    private $host = 'ec2-54-197-48-79.compute-1.amazonaws.com';
-    private $dbname = 'd8mmhag5m9ubs8';
-    private $user = 'updrlhawrqcpii';
-    private $password = '4776b9b884af923d41989afbed01ffccf9475f136344421e0b60800a3d81ddf7';
+    private $host = 'ec2-52-200-119-0.compute-1.amazonaws.com';
+    private $dbname = 'db81fu8e8voo4h';
+    private $user = 'tgytuuqlwplvpp';
+    private $password = '0daf0f78050e7fbee2685f12ba1c8a31cb12123bec90a9b3c2de61c9ad4a015c';
 
 
        /**
