@@ -61,7 +61,7 @@ method="post">
 
 
 </fieldset>
-  <input class="MyButton" type="button" value="commit" />
+  <input class="MyButton" type="submit" value="Send" />
   </form>
   <div class="footer">
  <p>Photography Zone | Adel Touati</p>
