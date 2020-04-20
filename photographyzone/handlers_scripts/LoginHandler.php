@@ -9,7 +9,7 @@ $email = htmlentities($_POST['email']);
 $password = $_POST['password'];
 if (! $dao->checkEmailExists($email)) {
 	$_SESSION["error"] = "Email or Password invalid";
-  } elseif (! $dao->validateUser($email, $password)) {
+  } elseif ($dao->validateUser($email, $password) === false) {
     $_SESSION["error"] = "Email or Password invalid";
     $_SESSION['AUTH'] = FALSE;
   }  else {
