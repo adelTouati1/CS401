@@ -82,11 +82,13 @@ class Dao
         $conn = $this->getConnection();
         $stmt = $conn->prepare("SELECT password FROM userSignUp WHERE email = :email");
         $stmt->bindParam(':email', $email);
+
         $stmt->execute();
 
-        $row = pg_fetch_result($stmt,0);
+        $row = pg_fetch_assoc($stmt);
+        $hash = $row['password'];
      
-        return password_verify($password, $row);
+        return password_verify($password, $hash);
     }
 	public function checkEmailExists ($email) {
 		$conn = $this->getConnection();

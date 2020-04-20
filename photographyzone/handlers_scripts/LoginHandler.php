@@ -10,7 +10,7 @@ $password = $_POST['password'];
 if (! $dao->checkEmailExists($email)) {
     $_SESSION["error"] = "Email or Password invalid";
     header("Location:../login.php");
-  } elseif ($dao->validateUser($email, $password) === false) {
+  } elseif (! $dao->validateUser($email, $password)) {
     $_SESSION["error"] = "Email or Password invalid";
     $_SESSION['AUTH'] = FALSE;
     header("Location:../login.php");
