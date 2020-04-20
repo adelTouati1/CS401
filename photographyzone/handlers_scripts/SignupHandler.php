@@ -22,11 +22,11 @@ require_once('classes/Dao.php');
   } 
 
   if (isset($_SESSION["error1"])){
-    header("Location:../signup.html");
+    header("Location:../signup.php");
   } else {
     echo "Account Created.";
     $dao->addUser($firstname, $lastname, $email, $password);
-    header("Location:../login.html");
+    header("Location:../login.php");
   }
   exit;
 

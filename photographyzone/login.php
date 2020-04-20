@@ -48,13 +48,13 @@
 method="post">
 <div align="center">
 <label for="email">Email:</label>
-<input type="email" id="inputlogin" name="email" required="required"><br>
+<input type="email" id="inputlogin" name="email" required="required"
 value="<?php 
 			if(isset($_SESSION["log_email"])){ 
 				echo $_SESSION["log_email"];
 				unset($_SESSION["log_email"]);
 			}
-			?>">
+			?>"><br>
 			<div id="email_error">
 				<p id="email_error_text">
 					<?php
@@ -69,13 +69,13 @@ value="<?php
 					?>
 				</p>
 <label for="password">Password:</label>
-<input type="password" id="inputlogin" name="Password" required="required"> <br>
+<input type="password" id="inputlogin" name="Password" required="required"
 value="<?php 
 			if(isset($_SESSION["log_password"])){ 
 				echo $_SESSION["log_password"];
 				unset($_SESSION["log_password"]);
 			}
-			?>">
+			?>"> <br>
 			<div id="password_error">
 				<p id="password_error_text">
 					<?php
