@@ -1,6 +1,9 @@
 
 <?php
  session_start();
+ if (isset($_SESSION["AUTH"]) && $_SESSION["AUTH"]) {
+	header("Location:index.php");
+}
  if (isset($_SESSION["error"])) {
 	echo "<div class='error'>" .  $_SESSION["error"] . "</div>";
 } ?>
@@ -54,7 +57,7 @@ method="post">
 <label for="password">Password:</label>
 <input class='login<?php if (isset($_SESSION["error"])) { echo " inputError"; } ?>' type="password" id="inputlogin" name="Password" required="required"> <br>
 </div>
-  <input  class="logButton" type="submit" value="Login" name="commit">
+  <input  class='login' type="submit" value="Login" name="commit">
   </form>
   <div class="footer">
  <p>Photography Zone | Adel Touati</p>

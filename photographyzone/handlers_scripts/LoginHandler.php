@@ -1,5 +1,6 @@
 <?php
 session_start();
+if ("_POST") {
 require_once("classes/Dao.php");
 $dao = new Dao();
 
@@ -17,4 +18,6 @@ if (! $dao->checkEmailExists($email)) {
     $_SESSION['name'] = $dao->getFirstName($email)['firstname'];
     header("Location:../index.php");
   }
+  header("Location:../login.php");
+}
   exit;
