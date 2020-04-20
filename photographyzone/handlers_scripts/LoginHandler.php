@@ -29,7 +29,7 @@ if(isset($_SESSION["emailNotEntered"]) || isset($_SESSION["passwordNotEntered"])
     header("Location: login.php");
 }
 else{
-    if($db->getConnection()){
+    if($dao->getConnection()){
         $password = hash("sha256", $password . "fKd93Vmz!k*dAv5029Vkf9$3Aa");
 // sanitize & validate it
 $validUser = $dao->validateUser($email, $password);
