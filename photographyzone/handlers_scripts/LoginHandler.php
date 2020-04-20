@@ -16,7 +16,7 @@ else{
 
 if(isset($_POST["password"])  && $_POST["password"] != ""){
     $password = $_POST['password'];
-    $_SESSION["log_pass"] = $password;
+    $_SESSION["log_password"] = $password;
     unset($_SESSION['passwordNotEntered']);
 }
 
@@ -35,7 +35,6 @@ else{
 // sanitize & validate it
 $validUser = $dao->validateUser($email, $password);
 if ($validUser) {
-    session_start();
     $_SESSION['AUTH'] = TRUE;
     $_SESSION['name'] = $dao->getFirstName($email)['firstname'];
 //TODO: more to come
@@ -43,7 +42,7 @@ if ($validUser) {
 } else {
     $_SESSION['AUTH'] = FALSE;
     $_SESSION["unauth_user"] = "Invalid Email or Password!";
-	unset($_SESSION["auth_user"]);
+	unset($_SESSION["AUTH"]);
 	header('Location: login.php');
 }
 }
