@@ -85,7 +85,7 @@ class Dao
         $stmt->bindParam(':email', $email);
         $stmt->execute();
 
-        $row = $stmt->fetch()['password'];
+        $row = pg_fetch_array($stmt)['password'];
      
         return password_verify($password, $row);
     }
