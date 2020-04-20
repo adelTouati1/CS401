@@ -51,9 +51,9 @@ method="post">
 
 
    <label for="message">Message:</label><br>
-   <textarea rows="5" cols="80" id="input"></textarea><br>
+   <textarea rows="5" cols="80" id="message" name="message"></textarea><br>
    <label for="email">Email:</label>
-   <input type="email" id="input" name="email"><br>
+   <input type="email" id="email" name="email"><br>
    <?php  if (isset($_SESSION["mess"])){
 	header("Location:index.php");
 }
@@ -61,7 +61,7 @@ method="post">
 
 
 </fieldset>
-  <input class="MyButton" type="submit" value="Send" />
+  <input class="MyButton" type="submit" value="Send" name="commit" />
   </form>
   <div class="footer">
  <p>Photography Zone | Adel Touati</p>

@@ -1,6 +1,9 @@
 <?php
 include_once('index.php');
- session_start(); ?>
+ session_start(); 
+ if (isset($_SESSION["mess"])) {
+	echo "<div class='error'>" .  $_SESSION["mess"] . "</div>";
+} ?>
 
 <!DOCTYPE html> 
 <html>
