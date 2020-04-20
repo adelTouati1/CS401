@@ -81,11 +81,11 @@ class Dao
 
         $conn = $this->getConnection();
         $stmt = $conn->prepare("SELECT password FROM userSignUp WHERE email = :email");
-
+        $stmt->setFetchMode(PDO::FETCH_ASSOC);
         $stmt->bindParam(':email', $email);
         $stmt->execute();
 
-        $row = $stmt->fetch()[0];
+        $row = $stmt->fetch()['password'];
      
         return password_verify($password, $row);
     }

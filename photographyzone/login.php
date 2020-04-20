@@ -57,7 +57,7 @@ method="post">
 <label for="password">Password:</label>
 <input class='login<?php if (isset($_SESSION["error"])) { echo " inputError"; } ?>' type="password" id="inputlogin" name="Password" required="required"> <br>
 </div>
-  <input  class='login' type="submit" value="Login" name="commit">
+  <input  class='MyButton' type="submit" value="Login" name="commit">
   </form>
   <div class="footer">
  <p>Photography Zone | Adel Touati</p>
