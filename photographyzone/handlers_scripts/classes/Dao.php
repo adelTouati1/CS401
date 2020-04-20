@@ -58,8 +58,7 @@ class Dao
     {
        
         $conn = $this->getConnection();
-		$query = $conn->prepare("INSERT INTO messages (message,email) 
-        VALUES (:message, :email)");
+		$query = $conn->prepare("INSERT INTO messages (message,email) VALUES (:message, :email)");
         $query->bindParam(':message', $message);
         $query->bindParam(':email', $email);
 		$query->execute();

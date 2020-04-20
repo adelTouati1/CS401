@@ -25,7 +25,7 @@ require_once('classes/Dao.php');
     $dao->addImage($email, $location, $camerabrand, $lensesize, $focus, $description);
     header("Location:../index.php");
   }else{
-    header("Location:../signup.html");
+    header("Location:../signup.php");
   } 
   
 

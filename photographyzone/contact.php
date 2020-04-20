@@ -51,7 +51,7 @@ method="post">
 
 
    <label for="message">Message:</label><br>
-   <textarea rows="5" cols="80" id="message" name="message"></textarea><br>
+   <textarea type="text" rows="5" cols="80" id="message" name="message"></textarea><br>
    <label for="email">Email:</label>
    <input type="email" id="email" name="email"><br>
    <?php  if (isset($_SESSION["mess"])){

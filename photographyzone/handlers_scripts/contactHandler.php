@@ -3,18 +3,16 @@ session_start();
 require_once('classes/Dao.php');
   $dao = new Dao();
 
-  $message = $_POST["message"];
-  $_SESSION["message"] = $message;
+  $message = $_POST['message'];
 
-  $email = $_POST["email"];
-  $_SESSION["email"] = $email;
+  $email = htmlentities($_POST['email']);
   
   if ($dao->checkEmailExists($email)) {
     $dao->message($message,$email);
     $_SESSION["mess"] = "Message sent";
     header("Location:../index.php");
   }else{
-    header("Location:../signup.html");
+    header("Location:../signup.php");
   } 
   
 
