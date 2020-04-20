@@ -26,7 +26,7 @@ require_once('classes/Dao.php');
   } else {
     echo "Account Created.";
     $dao->addUser($firstname, $lastname, $email, $password);
-    header("Location:../login.html");
+    header("Location:../login.php");
   }
   exit;
 

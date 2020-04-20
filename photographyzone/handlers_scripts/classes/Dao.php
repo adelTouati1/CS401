@@ -66,7 +66,7 @@ class Dao
 
     public function hashPassword($password)
     {
-        $hash = password_hash($password, PASSWORD_BCRYPT);
+        $hash = password_hash($password, PASSWORD_DEFAULT);
         return $hash;
     }
 
@@ -85,12 +85,9 @@ class Dao
         $stmt->bindParam(':email', $email);
         $stmt->execute();
 
-        $row = $stmt->fetch();
-        if (!$row) {
-            return false;
-        }
-        $hash = $this->hashPassword($password);
-        return password_verify($password, $hash);
+        $row = $stmt->fetch()[0];
+     
+        return password_verify($password, $row);
     }
 	public function checkEmailExists ($email) {
 		$conn = $this->getConnection();

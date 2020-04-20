@@ -1,5 +1,10 @@
 
-
+<?php
+ session_start();
+ if (isset($_SESSION["error"])) {
+	echo "<div class='error'>" .  $_SESSION["error"] . "</div>";
+} ?>
+ <!DOCTYPE html> 
 <html>
 <div id="container">
   <head>
@@ -15,7 +20,7 @@
      <form>
 
 
-     <input class="MyButton" type="button" value="Login" onclick="window.location.href='login.html'" />
+     <input class="MyButton" type="button" value="Login" onclick="window.location.href='login.php'" />
      <input class="MyButton" type="button" value="Sign Up" onclick="window.location.href='signup.html'" />
    
     </form>
@@ -27,27 +32,27 @@
   <ul>
           <li class="spacer-401">&nbsp;</li>
             <li>
-      <a href="index.html">Browse</a>
+      <a href="index.php">Browse</a>
     </li>
     <li id="current-page">
-      <a href="portrait.html">Portrait</a>
+      <a href="portrait.php">Portrait</a>
     </li>
     <li>
-      <a href="blog.html">Blog</a>
+      <a href="blog.php">Blog</a>
     </li>
     <li>
-      <a href="contact.html">Contact</a>
+      <a href="contact.php">Contact</a>
     </li>
 
       </ul>
 </div>
-<form accept-charset="UTF-8" action="handlers_scripts/LoginHandler.php" class="new_message" id="new_message"
+<form accept-charset="UTF-8" action="handlers_scripts/LoginHandler.php"  id="login-form"
 method="post">
 <div align="center">
 <label for="email">Email:</label>
-<input type="email" id="inputlogin" name="email" required="required"><br>
+<input class='login<?php if (isset($_SESSION["error"])) { echo " inputError"; } ?>' type="email" id="inputlogin" name="email" required="required"><br>
 <label for="password">Password:</label>
-<input type="password" id="inputlogin" name="Password" required="required"> <br>
+<input class='login<?php if (isset($_SESSION["error"])) { echo " inputError"; } ?>' type="password" id="inputlogin" name="Password" required="required"> <br>
 </div>
   <input  class="logButton" type="submit" value="Login" name="commit">
   </form>
@@ -58,4 +63,10 @@ method="post">
   </body>
 
 </div>
+<script>
+$('#login-form').validate();
+</script>
+<?php
+unset($_SESSION["error"]);
+?>
 </html>

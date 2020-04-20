@@ -1,21 +1,20 @@
 <?php
+session_start();
 require_once("classes/Dao.php");
 $dao = new Dao();
 
 // Get email and password
 $email = htmlentities($_POST['email']);
 $password = $_POST['password'];
-
-// sanitize & validate it
-$validUser = $dao->validateUser($email, $password);
-if ($validUser) {
-    session_start();
-    $_SESSION['AUTH'] = TRUE;
-    $_SESSION['name'] = $dao->getFirstName($email)['firstname'];
-//TODO: more to come
-    header("Location:../index.php");
-} else {
-    echo "IT IS NOT WORKING";
+if (! $dao->checkEmailExists($email)) {
+	$_SESSION["error"] = "Email or Password invalid";
+  } elseif (! $dao->validateUser($email, $password)) {
+    $_SESSION["error"] = "Email or Password invalid";
     $_SESSION['AUTH'] = FALSE;
-    header("Location:../login.html");
-}
+  }  else {
+	unset($_SESSION["error"]);
+    $_SESSION['AUTH'] = true;
+    $_SESSION['name'] = $dao->getFirstName($email)['firstname'];
+    header("Location:../index.php");
+  }
+  exit;
