@@ -1,5 +1,6 @@
 <?php
 require_once("classes/Dao.php");
+session_start();
 $dao = new Dao();
 
 if(isset($_POST["email"])  && $_POST["email"] != ""){
