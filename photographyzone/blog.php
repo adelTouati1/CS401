@@ -19,7 +19,7 @@
     <input class="MyButton" type="button" value="Log out" onclick="window.location.href='Logout.php'"/>
     <?php else: ?>
      <input class="MyButton" type="button" value="Login" onclick="window.location.href='login.html'" />
-     <input class="MyButton" type="button" value="Sign Up" onclick="javascript:window.location.href='signup.html'" />
+     <input class="MyButton" type="button" value="Sign Up" onclick="javascript:window.location.href='signup.php'" />
      <?php endif; ?>
     </form>
     
