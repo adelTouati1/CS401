@@ -55,7 +55,7 @@ method="post">
 <label for="email">Email:</label>
 <input class='login<?php if (isset($_SESSION["error"])) { echo " inputError"; } ?>' type="email" id="inputlogin" name="email" required="required"><br>
 <label for="password">Password:</label>
-<input class='login<?php if (isset($_SESSION["error"])) { echo " inputError"; } ?>' type="password" id="inputlogin" name="Password" required="required"> <br>
+<input class='login<?php if (isset($_SESSION["error"])) { echo " inputError"; } ?>' type="password" id="inputlogin" name="password" required="required"> <br>
 </div>
   <input  class='MyButton' type="submit" value="Login" name="commit">
   </form>
