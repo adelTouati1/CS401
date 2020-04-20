@@ -1,12 +1,7 @@
 
 <?php
  session_start();
- if (isset($_SESSION["AUTH"]) && $_SESSION["AUTH"]) {
-	header("Location:index.php");
-}
- if (isset($_SESSION["error"])) {
-	echo "<div class='error'>" .  $_SESSION["error"] . "</div>";
-} ?>
+?>
  <!DOCTYPE html> 
 <html>
 <div id="container">
@@ -56,6 +51,12 @@ method="post">
 <input class='login<?php if (isset($_SESSION["error"])) { echo " inputError"; } ?>' type="email" id="inputlogin" name="email" required="required"><br>
 <label for="password">Password:</label>
 <input class='login<?php if (isset($_SESSION["error"])) { echo " inputError"; } ?>' type="password" id="inputlogin" name="password" required="required"> <br>
+<?php  if (isset($_SESSION["AUTH"]) && $_SESSION["AUTH"]) {
+	header("Location:index.php");
+}
+ if (isset($_SESSION["error"])) {
+	echo "<div class='error'>" .  $_SESSION["error"] . "</div>";
+} ?>
 </div>
   <input  class='MyButton' type="submit" value="Login" name="commit">
   </form>
