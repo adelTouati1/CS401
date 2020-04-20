@@ -18,8 +18,8 @@
     <MARQUEE bgcolor=white loop="-1" scrollamount="2" width="100%"><?php echo $_SESSION['name'] ?></MARQUEE>
     <input class="MyButton" type="button" value="Log out" onclick="window.location.href='Logout.php'"/>
     <?php else: ?>
-     <input class="MyButton" type="button" value="Login" onclick="window.location.href='login.html'" />
-     <input class="MyButton" type="button" value="Sign Up" onclick="javascript:window.location.href='signup.html'" />
+     <input class="MyButton" type="button" value="Login" onclick="window.location.href='login.php'" />
+     <input class="MyButton" type="button" value="Sign Up" onclick="javascript:window.location.href='signup.php'" />
      <?php endif; ?>
     </form>
     
@@ -45,21 +45,23 @@
 
       </ul>
 </div>
-<form>
+<form accept-charset="UTF-8" action="handlers_scripts/contactHandler.php"  id="contact-form"
+method="post">
      <fieldset>
 
 
-   <label for="Description">Message:</label><br>
+   <label for="message">Message:</label><br>
    <textarea rows="5" cols="80" id="input"></textarea><br>
    <label for="email">Email:</label>
    <input type="email" id="input" name="email"><br>
-
+   <?php  if (isset($_SESSION["mess"])){
+	header("Location:index.php");
+}
+ ?>
 
 
 </fieldset>
-  </form>
-  <form>
-  <input class="MyButton" type="button" value="Send" />
+  <input class="MyButton" type="button" value="commit" />
   </form>
   <div class="footer">
  <p>Photography Zone | Adel Touati</p>

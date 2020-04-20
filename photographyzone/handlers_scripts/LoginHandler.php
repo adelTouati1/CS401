@@ -8,10 +8,10 @@ $dao = new Dao();
 $email = htmlentities($_POST['email']);
 $password = $_POST['password'];
 if (! $dao->checkEmailExists($email)) {
-    $_SESSION["error"] = "Email invalid";
+    $_SESSION["error"] = "Email or password invalid";
     header("Location:../login.php");
   } elseif (! $dao->validateUser($email, $password)) {
-    $_SESSION["error"] = "Password invalid";
+    $_SESSION["error"] = "Email or password invalid";
     $_SESSION['AUTH'] = FALSE;
     header("Location:../login.php");
   }  else {
