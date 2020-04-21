@@ -44,14 +44,13 @@ class Dao
        
         $conn = $this->getConnection();
 		$query = $conn->prepare("INSERT INTO images (email, location, camerabrand, lensesize, focus, description, picture) 
-        VALUES (:email, :location, :camerabrand, :lensesize, :focus, :description, :picture)");
+        VALUES (:email, :location, :camerabrand, :lensesize, :focus, :description, :picture)", array(PDO::ATTR_CURSOR, PDO::CURSOR_SCROLL));
         $query->bindParam(':email', $email);
         $query->bindParam(':location', $location);
 		$query->bindParam(':camerabrand', $camerabrand);
 		$query->bindParam(':lensesize', $lensesize);
         $query->bindParam(':focus', $focus);
         $query->bindParam(':description', $description);
-        $query->bindValue(":picture", $picture, PDO::PARAM_LOB);//change to this below
         $query->bindParam(":picture", $picture, PDO::PARAM_LOB);
 		$query->execute();
     }
