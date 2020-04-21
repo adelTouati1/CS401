@@ -44,7 +44,7 @@ class Dao
        
         $conn = $this->getConnection();
 		$query = $conn->prepare("INSERT INTO images (email, location, camerabrand, lensesize, focus, description, picture) 
-        VALUES (:email, :location, :camerabrand, :lensesize, :focus, :description, ?)");
+        VALUES (:email, :location, :camerabrand, :lensesize, :focus, :description, :picture)");
         $query->bindParam(':email', $email);
         $query->bindParam(':location', $location);
 		$query->bindParam(':camerabrand', $camerabrand);
