@@ -49,8 +49,8 @@
      <fieldset>
    <label for="email">Email:</label>
    <input type="email" id="email" name="email" required="required">
-   <input type="file" id="imageupload" name="imageupload" accept="image/png, image/jpeg">
-   <label for="imageupload" id="imageupload"> Select a image to upload:</label>
+   <input type="file" id="picture" name="picture" accept="image/png, image/jpeg" required>
+   <label for="picture" id="picture"> Select a image to upload:</label>
    <br>
 
    <label for="location">Location:</label>
