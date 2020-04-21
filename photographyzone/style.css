@@ -1,5 +1,6 @@
 body {
   background-color: white;
+  height: 70vh
 }
 
 button {
@@ -148,7 +149,7 @@ img {
 /* Position the image container (needed to position the left and right arrows) */
 .container {
   position: relative;
-  object-fit: contain;
+ 
 }
 
 /* Hide the images by default */
