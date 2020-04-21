@@ -89,7 +89,7 @@ include_once('index.php');
 
 <!-- Image text -->
 <div class="caption-container">
-  <p id="caption"></p>
+  <p1 id="caption"></p1>
 </div>
 
 <!-- Thumbnail images -->
