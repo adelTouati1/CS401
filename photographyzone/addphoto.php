@@ -45,14 +45,13 @@
 
       </ul>
 </div>
-<form action="/handlers_scripts/imagesHandler.php" id="addimage" method="post">
+<form action="/handlers_scripts/imagesHandler.php" id="addimage" method="post" enctype="multipart/form-data">
      <fieldset>
    <label for="email">Email:</label>
    <input type="email" id="email" name="email" required="required">
-   <form action="/handlers_scripts/imagesHandler.php" id="addimage" method="post" enctype="multipart/form-data">
    <input type="file" id="picture" name="picture" accept="image/png, image/jpeg" required>
    <label for="picture" id="picture"> Select a image to upload:</label>
-   </form>
+ 
    <br>
 
    <label for="location">Location:</label>
