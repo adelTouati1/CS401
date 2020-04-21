@@ -22,13 +22,10 @@ require_once('classes/Dao.php');
   $_SESSION["description"] = $description;
 
   $fi=($_FILES['picture']['tmp_name']);
-  $p=fopen($fi,'r');
-  $data=fread($p,filesize($fi));
-  $data=addslashes($data);
-  $picture= pg_escape_bytea($data);
+  $picture=fopen($fi,'rb');
+  
 
   if ($dao->checkEmailExists($email)) {
-    move_uploaded_file($_FILES['picture']['tmp_name'],$target);
     $dao->addImage($email, $location, $camerabrand, $lensesize, $focus, $description, $picture);
     header("Location:../index.php");
   }else{
