@@ -23,7 +23,7 @@ if ($_FILES['picture']['size']>MAX_UP) { die("Exceeded maximum allowed size"); }
   $_SESSION["description"] = $description;
   
   $picture = $_POST["picture"];
-
+  $_SESSION["picture"] = $picture;
   if ($dao->checkEmailExists($email)) {
     $dao->addImage($email, $location, $camerabrand, $lensesize, $focus, $description, $picture);
     header("Location:../index.php");
