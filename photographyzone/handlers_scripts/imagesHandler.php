@@ -21,12 +21,15 @@ require_once('classes/Dao.php');
   $description = $_POST["description"];
   $_SESSION["description"] = $description;
 
-  $fi=($_FILES['picture']['tmp_name']);
-  $img = fopen($f, 'r') or die("cannot read image\n");
-  $data = fread($img, filesize($f));
-
-  $picture = pg_escape_bytea($data);
-  fclose($img);
+ if (isset($_POST['picture'])){
+   if(getimagesize($_FILES['picture']['tmp_name'])===FALSE){
+     echo "plese select an image.";
+   }else{
+     $picture = addslashes($_FILES['picture']['tmp_name']);
+     $picture= file_get_contents($picture);
+     $picture=base64_decode($picture);
+   }
+ }
   
 
   if ($dao->checkEmailExists($email)) {
