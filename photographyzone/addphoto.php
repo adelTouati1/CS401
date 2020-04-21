@@ -45,7 +45,7 @@
 
       </ul>
 </div>
-<form action="/handlers_scripts/imagesHandler.php" id="addimage" method="post">
+<form action="/handlers_scripts/imagesHandler.php" id="addimage" method="post" enctype="multipart/form-data">
      <fieldset>
    <label for="email">Email:</label>
    <input type="email" id="email" name="email" required="required">
