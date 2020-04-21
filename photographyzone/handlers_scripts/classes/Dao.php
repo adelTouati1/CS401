@@ -111,7 +111,6 @@ class Dao
 
         $row = $stmt->fetch(PDO::FETCH_BOUND);
         $pic = $row['picture'];
-    
         return $pic;
     }
 
