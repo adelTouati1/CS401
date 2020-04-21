@@ -22,7 +22,7 @@ if ($_FILES['picture']['size']>MAX_UP) { die("Exceeded maximum allowed size"); }
   $description = $_POST["description"];
   $_SESSION["description"] = $description;
   if(isset($_POST["picture"])){
-  $picture =[$_FILES["picture"], file_get_contents($_FILES['picture'])];;
+  $picture =$_FILES["picture"];
   $_SESSION["picture"] = $picture;
   }
   if ($dao->checkEmailExists($email)) {
