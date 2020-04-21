@@ -26,7 +26,7 @@ require_once('classes/Dao.php');
      $picture = addslashes($_FILES['picture']['tmp_name']);
      $picture= file_get_contents($picture);
      $picture=base64_decode($picture);
-   }
+   
  }
   
 
