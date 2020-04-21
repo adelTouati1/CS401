@@ -5,9 +5,7 @@ include_once('index.php');
 	echo "<div class='error'>" .  $_SESSION["mess"] . "</div>";
 }
 ?>
-<?php include'imagesHandler.php';
-echo $p;
-?>
+
 
 <!DOCTYPE html> 
 <html>
@@ -52,35 +50,100 @@ echo $p;
     </li>
 
       </ul>
+      <div class="container">
+
+<!-- Full-width images with number text -->
+<div class="mySlides">
+  <div class="numbertext">1 / 6</div>
+    <img src="aaron-burden.jpg" style="width:100%">
 </div>
 
+<div class="mySlides">
+  <div class="numbertext">2 / 6</div>
+    <img src="alexandre-chambon.jpg" style="width:100%">
+</div>
 
+<div class="mySlides">
+  <div class="numbertext">3 / 6</div>
+    <img src="kasper-rasmussen.jpg" style="width:100%">
+</div>
 
-    <div class="row">
-      <div class="column">
-      <img id="photo" src="photo1.jpeg"
-    alt="photo" style="width:100%">
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed in interdum leo. Nullam tempor justo vel tellus facilisis, vitae semper nulla finibus. Nulla laoreet aliquam erat, in iaculis velit consequat eget. Sed nec semper justo. Aliquam erat volutpat. Nulla vulputate risus sagittis congue porttitor. Pellentesque interdum libero magna, sit amet condimentum lacus rhoncus a. </p>
+<div class="mySlides">
+  <div class="numbertext">4 / 6</div>
+    <img src="kevin-green.jpg" style="width:100%">
+</div>
 
-    </div>
-     <div class="column">
-    <img id="photo" src="photo2.jpg"
-    alt="photo" style="width:100%">
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed in interdum leo. Nullam tempor justo vel tellus facilisis, vitae semper nulla finibus. Nulla laoreet aliquam erat, in iaculis velit consequat eget. Sed nec semper justo. Aliquam erat volutpat. Nulla vulputate risus sagittis congue porttitor. Pellentesque interdum libero magna, sit amet condimentum lacus rhoncus a. </p>
+<div class="mySlides">
+  <div class="numbertext">5 / 6</div>
+    <img src="nathan-dumlao.jpg" style="width:100%">
+</div>
 
+<div class="mySlides">
+  <div class="numbertext">6 / 6</div>
+    <img src="robert-bye.jpg" style="width:100%">
+</div>
+
+<!-- Next and previous buttons -->
+<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+<a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+<!-- Image text -->
+<div class="caption-container">
+  <p id="caption"></p>
+</div>
+
+<!-- Thumbnail images -->
+<div class="row">
+  <div class="column">
+    <img class="demo cursor" src="aaron-burden.jpg" style="width:100%" onclick="currentSlide(1)" alt="The butterfly">
   </div>
   <div class="column">
-    <img id="photo" src="photo3.jpg"
-    alt="photo" style="width:100%">
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed in interdum leo. Nullam tempor justo vel tellus facilisis, vitae semper nulla finibus. Nulla laoreet aliquam erat, in iaculis velit consequat eget. Sed nec semper justo. Aliquam erat volutpat. Nulla vulputate risus sagittis congue porttitor. Pellentesque interdum libero magna, sit amet condimentum lacus rhoncus a. </p>
+    <img class="demo cursor" src="alexandre-chambon.jpg" style="width:100%" onclick="currentSlide(2)" alt="Horseshoe bend">
   </div>
+  <div class="column">
+    <img class="demo cursor" src="kasper-rasmussen.jpg" style="width:100%" onclick="currentSlide(3)" alt="Architecture">
+  </div>
+  <div class="column">
+    <img class="demo cursor" src="kevin-green.jpg" style="width:100%" onclick="currentSlide(4)" alt="Mountains and fog">
+  </div>
+  <div class="column">
+    <img class="demo cursor" src="nathan-dumlao.jpg" style="width:100%" onclick="currentSlide(5)" alt="Coffee!">
+  </div>
+  <div class="column">
+    <img class="demo cursor" src="robert-bye.jpg" style="width:100%" onclick="currentSlide(6)" alt="Waterfall">
+  </div>
+</div>
+</div>
+<script>
+var slideIndex = 1;
+showSlides(slideIndex);
 
-</div>
-<div class="add">
-      <form>
-      <input class="MyButton" type="button" value="Add Photo" onclick="window.location.href='addphoto.php'" />
-      </form>
-</div>
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("demo");
+  var captionText = document.getElementById("caption");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+  captionText.innerHTML = dots[slideIndex-1].alt;
+}
+</script>
 <div class="line"> </div>
 
     </ul>
