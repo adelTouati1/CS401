@@ -112,7 +112,7 @@ class Dao
 
         $row = $stmt->fetch(PDO::FETCH_BOUND);
         $pic = $row['picture'];
-        return $pic;
+        return file_put_contents("image.jpg",$pic);
     }
 
 	public function checkEmailExists ($email) {
