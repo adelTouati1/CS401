@@ -15,9 +15,8 @@ include_once('index.php');
     <title>Photography Zone</title>
       <link rel="stylesheet" type="text/css" href="style.css">
   </head>
-  <body>
+<body>
     <hr/>
-   <div>
      <form>
 
      <?php if ($_SESSION['AUTH']): ?>
@@ -51,15 +50,15 @@ include_once('index.php');
     </li>
 
       </ul>
+    </div>
 
-
-      <div class="container">
+<div class="container">
 
 <!-- Full-width images with number text -->
-<div class="mySlides">
-  <div class="numbertext">1 / 6</div>
-    <img src="aaron-burden.jpg" style="width:100%">
-</div>
+    <div class="mySlides">
+      <div class="numbertext">1 / 6</div>
+      <img src="aaron-burden.jpg" style="width:100%">
+    </div>
 
 <div class="mySlides">
   <div class="numbertext">2 / 6</div>
@@ -116,7 +115,7 @@ include_once('index.php');
     <img class="demo cursor" src="robert-bye.jpg" style="width:100%" onclick="currentSlide(6)" alt="Waterfall">
   </div>
 </div>
-</div>
+
 <script>
 var slideIndex = 1;
 showSlides(slideIndex);
@@ -150,9 +149,8 @@ function showSlides(n) {
 <div class="line"> </div>
 
     </ul>
-    <div class="footer">
+<div class="footer">
    <p>Photography Zone | Adel Touati</p>
-    </div>
-  </body>
 </div>
+</body>
 </html>
