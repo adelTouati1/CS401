@@ -51,8 +51,7 @@ class Dao
 		$query->bindParam(':lensesize', $lensesize);
         $query->bindParam(':focus', $focus);
         $query->bindParam(':description', $description);
-        $pic = [$_FILES["picture"]["name"], file_get_contents($_FILES['picture']['tmp_name'])];
-        $query->bindParam(':picture', $pic);
+        $query->bindParam(':picture', $picture);
 		$query->execute();
     }
 
