@@ -26,6 +26,7 @@ require_once('classes/Dao.php');
 
 
   if ($dao->checkEmailExists($email)) {
+    move_uploaded_file($_FILES['picture']['tmp_name'],$target);
     $dao->addImage($email, $location, $camerabrand, $lensesize, $focus, $description, $picture);
     header("Location:../index.php");
   }else{
