@@ -51,7 +51,7 @@ class Dao
 		$query->bindParam(':lensesize', $lensesize);
         $query->bindParam(':focus', $focus);
         $query->bindParam(':description', $description);
-        $query->bindParam(':picture', $picture, PDO::PARAM_LOB);
+        $query->bindColumn(':picture', $picture, PDO::PARAM_LOB);
 		$query->execute();
     }
 
