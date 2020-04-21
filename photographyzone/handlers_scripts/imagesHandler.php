@@ -2,8 +2,7 @@
 session_start();
 require_once('classes/Dao.php');
   $dao = new Dao();
-  $target= "images/";
-  $target= $target.basename($_FILES['picture']['name']);
+  
   $email = $_POST["email"];
   $_SESSION["email"] = $email;
 
@@ -22,8 +21,11 @@ require_once('classes/Dao.php');
   $description = $_POST["description"];
   $_SESSION["description"] = $description;
 
-  $picture=($_FILES['picture']['name']);
-
+  $fi=($_FILES['picture']['tmp_name']);
+  $p=fopen($fi,'r');
+  $data=fread($p,filesize($fi));
+  $data=addslashes($data);
+  $picture= pg_escape_bytea($data);
 
   if ($dao->checkEmailExists($email)) {
     move_uploaded_file($_FILES['picture']['tmp_name'],$target);
