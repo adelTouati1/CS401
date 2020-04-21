@@ -3,7 +3,13 @@ include_once('index.php');
  session_start(); 
  if (isset($_SESSION["mess"])) {
 	echo "<div class='error'>" .  $_SESSION["mess"] . "</div>";
-} ?>
+}
+if(move_uploaded_file($_FILES['picture']['tmp_name'],$target)){
+  echo"The file".basename($_FILES['uploadedfile']['name'])."has been uploaded, and your information has been added";
+}else{
+  echo "Sorry there was a problem";
+}
+?>
 
 <!DOCTYPE html> 
 <html>

@@ -24,11 +24,6 @@ require_once('classes/Dao.php');
 
   $picture=($_FILES['picture']['name']);
 
-  if(move_uploaded_file($_FILES['picture']['tmp_name'],$target)){
-    echo"The file".basename($_FILES['uploadedfile']['name'])."has been uploaded, and your information has been added";
-  }else{
-    echo "Sorry there was a problem";
-  }
 
   if ($dao->checkEmailExists($email)) {
     $dao->addImage($email, $location, $camerabrand, $lensesize, $focus, $description, $picture);
