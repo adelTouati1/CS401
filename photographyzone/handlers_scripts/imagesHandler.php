@@ -3,9 +3,7 @@ session_start();
 require_once('classes/Dao.php');
   $dao = new Dao();
   define('MAX_UP', 16000000);
-  if ($_FILES['picture']['size']==0) { die("No file selected"); }
 if ($_FILES['picture']['size']>MAX_UP) { die("Exceeded maximum allowed size"); } 
-if (exif_imagetype($_FILES['picture']['tmp_name'])===false) { die("Not an image"); }
   $email = $_POST["email"];
   $_SESSION["email"] = $email;
 
