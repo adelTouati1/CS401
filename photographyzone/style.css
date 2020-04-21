@@ -148,7 +148,7 @@ img {
 /* Position the image container (needed to position the left and right arrows) */
 .container {
   position: relative;
-  height: 100%;
+  object-fit: contain;
 }
 
 /* Hide the images by default */
