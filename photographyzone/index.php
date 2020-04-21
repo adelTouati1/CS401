@@ -9,6 +9,7 @@ include_once('index.php');
 
 <!DOCTYPE html> 
 <html>
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <div id="container">
   <head>
     <title>Photography Zone</title>
@@ -50,6 +51,8 @@ include_once('index.php');
     </li>
 
       </ul>
+
+
       <div class="container">
 
 <!-- Full-width images with number text -->

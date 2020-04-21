@@ -143,14 +143,12 @@ h1 {
 }
 img {
   vertical-align: middle;
-  max-height: 100%;
-  object-fit: contain;
+  
 }
 
 /* Position the image container (needed to position the left and right arrows) */
 .container {
- /* Container's dimensions */
-  height: 400px;
+  position: relative;
  
 }
 
