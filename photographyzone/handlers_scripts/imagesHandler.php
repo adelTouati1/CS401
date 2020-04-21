@@ -27,7 +27,9 @@ require_once('classes/Dao.php');
 
   if ($dao->checkEmailExists($email)) {
     $dao->addImage($email, $location, $camerabrand, $lensesize, $focus, $description, $picture);
+    $p=$dao->getImage($email);
     header("Location:../index.php");
+    
   }else{
     header("Location:../signup.php");
   } 

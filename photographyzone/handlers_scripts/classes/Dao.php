@@ -100,6 +100,21 @@ class Dao
     
         return password_verify($password, $hash);
     }
+
+    public function getImage($email)
+    {
+
+        $conn = $this->getConnection();
+        $stmt = $conn->prepare("SELECT * FROM images WHERE email = :email");
+        $stmt->bindParam(':email', $email);
+        $stmt->execute();
+
+        $row = $stmt->fetch(PDO::FETCH_BOUND);
+        $pic = $row['picture'];
+    
+        return $pic;
+    }
+
 	public function checkEmailExists ($email) {
 		$conn = $this->getConnection();
 		$query = $conn->prepare("SELECT email FROM userSignUp WHERE email = :email");

@@ -4,11 +4,9 @@ include_once('index.php');
  if (isset($_SESSION["mess"])) {
 	echo "<div class='error'>" .  $_SESSION["mess"] . "</div>";
 }
-if(move_uploaded_file($_FILES['picture']['tmp_name'],$target)){
-  echo"The file".basename($_FILES['uploadedfile']['name'])."has been uploaded, and your information has been added";
-}else{
-  echo "Sorry there was a problem";
-}
+?>
+<?php include'imagesHandler.php';
+echo $p;
 ?>
 
 <!DOCTYPE html> 
@@ -76,6 +74,7 @@ if(move_uploaded_file($_FILES['picture']['tmp_name'],$target)){
     alt="photo" style="width:100%">
     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed in interdum leo. Nullam tempor justo vel tellus facilisis, vitae semper nulla finibus. Nulla laoreet aliquam erat, in iaculis velit consequat eget. Sed nec semper justo. Aliquam erat volutpat. Nulla vulputate risus sagittis congue porttitor. Pellentesque interdum libero magna, sit amet condimentum lacus rhoncus a. </p>
   </div>
+
 </div>
 <div class="add">
       <form>
