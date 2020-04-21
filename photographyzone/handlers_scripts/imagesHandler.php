@@ -21,10 +21,8 @@ require_once('classes/Dao.php');
   $description = $_POST["description"];
   $_SESSION["description"] = $description;
 
- if (isset($_POST['picture'])){
-   if(getimagesize($_FILES['picture']['tmp_name'])===FALSE){
-     echo "plese select an image.";
-   }else{
+ if (isset($_POST['commit'])){
+   
      $picture = addslashes($_FILES['picture']['tmp_name']);
      $picture= file_get_contents($picture);
      $picture=base64_decode($picture);
