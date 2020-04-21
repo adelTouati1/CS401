@@ -39,7 +39,7 @@ class Dao
         
     }
 
-    public function addImage($email, $location, $camerabrand, $lensesize, $focus, $description, )
+    public function addImage($email, $location, $camerabrand, $lensesize, $focus, $description)
     {
        
         $conn = $this->getConnection();
