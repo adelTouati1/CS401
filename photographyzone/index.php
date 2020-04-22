@@ -19,8 +19,6 @@ include_once('index.php');
     <body>
         <div class="header">
 
-            <hr/>
-
             <?php if ($_SESSION['AUTH']): ?>
 
                 <MARQUEE bgcolor=white loop="-1" scrollamount="2" width="100%">Welcome:
