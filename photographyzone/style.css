@@ -158,7 +158,13 @@ img {
 
 /* Hide the images by default */
 .mySlides {
-  display: none;
+  min-height: 150px;
+  min-width: 150px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  display: table-cell;
+  vertical-align: middle;
 }
 
 /* Add a pointer when hovering over the thumbnail images */

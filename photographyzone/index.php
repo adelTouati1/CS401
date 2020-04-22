@@ -56,34 +56,33 @@ include_once('index.php');
         <!-- Full-width images with number text -->
         <div class="mySlides">
             <div class="numbertext">1 / 6</div>
-            <img src="aaron-burden.jpg" style="width:100%">
+            <img src="aaron-burden.jpg" style="width:auto;">
         </div>
 
         <div class="mySlides">
             <div class="numbertext">2 / 6</div>
-            <img src="alexandre-chambon.jpg" style="width:100%">
+            <img src="alexandre-chambon.jpg" style="width:auto;">
         </div>
 
         <div class="mySlides">
             <div class="numbertext">3 / 6</div>
-            <img src="kasper-rasmussen.jpg" style="width:100%">
+            <img src="kasper-rasmussen.jpg" style="width:auto;">
         </div>
 
         <div class="mySlides">
             <div class="numbertext">4 / 6</div>
-            <img src="kevin-green.jpg" style="width:100%">
+            <img src="kevin-green.jpg" style="width:auto;">
         </div>
 
         <div class="mySlides">
             <div class="numbertext">5 / 6</div>
-            <img src="nathan-dumlao.jpg" style="width:100%">
+            <img src="nathan-dumlao.jpg" style="width:auto;">
         </div>
 
         <div class="mySlides">
             <div class="numbertext">6 / 6</div>
-            <img src="robert-bye.jpg" style="width:100%">
+            <img src="robert-bye.jpg" style="width:auto;">
         </div>
-
         <!-- Next and previous buttons -->
         <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
         <a class="next" onclick="plusSlides(1)">&#10095;</a>
