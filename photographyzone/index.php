@@ -8,6 +8,7 @@ include_once('index.php');
 
     <!DOCTYPE html>
     <html>
+
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <head>
@@ -17,6 +18,7 @@ include_once('index.php');
 
     <body>
         <div class="container">
+
             <hr/>
 
             <?php if ($_SESSION['AUTH']): ?>
