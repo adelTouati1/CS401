@@ -134,6 +134,12 @@ border-width: 1px;
   padding: 5px;
 }
 
+marquee{
+  font-size: 25px;
+  font-weight: 600;
+  color:blue;
+  font-family: sans-serif;
+  }
 
 h1 {
   text-align: center;
@@ -146,8 +152,6 @@ h1 {
 }
 img {
   vertical-align: middle;
-  
-  
 }
 
 /* Position the image container (needed to position the left and right arrows) */
@@ -165,7 +169,7 @@ img {
   text-align: center;
   display: table-cell;
   vertical-align: middle;
-  padding-bottom: 10px;
+  padding-bottom: 1em;
 }
 
 /* Add a pointer when hovering over the thumbnail images */

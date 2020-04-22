@@ -95,22 +95,22 @@ include_once('index.php');
         <!-- Thumbnail images -->
         <div class="row">
             <div class="column">
-                <img class="demo cursor" src="aaron-burden.jpg" style="width:100%" onclick="currentSlide(1)" alt="The butterfly">
+                <img class="demo cursor" src="aaron-burden.jpg" style="width:100%;height:200px" onclick="currentSlide(1)" alt="The butterfly">
             </div>
             <div class="column">
-                <img class="demo cursor" src="alexandre-chambon.jpg" style="width:100%" onclick="currentSlide(2)" alt="Horseshoe bend">
+                <img class="demo cursor" src="alexandre-chambon.jpg" style="width:100%;height:200px" onclick="currentSlide(2)" alt="Horseshoe bend">
             </div>
             <div class="column">
-                <img class="demo cursor" src="kasper-rasmussen.jpg" style="width:100%" onclick="currentSlide(3)" alt="Architecture">
+                <img class="demo cursor" src="kasper-rasmussen.jpg" style="width:100%;height:200px" onclick="currentSlide(3)" alt="Architecture">
             </div>
             <div class="column">
-                <img class="demo cursor" src="kevin-green.jpg" style="width:100%" onclick="currentSlide(4)" alt="Mountains and fog">
+                <img class="demo cursor" src="kevin-green.jpg" style="width:100%;height:200px" onclick="currentSlide(4)" alt="Mountains and fog">
             </div>
             <div class="column">
-                <img class="demo cursor" src="nathan-dumlao.jpg" style="width:100%" onclick="currentSlide(5)" alt="Coffee!">
+                <img class="demo cursor" src="nathan-dumlao.jpg" style="width:100%;height:200px" onclick="currentSlide(5)" alt="Coffee!">
             </div>
             <div class="column">
-                <img class="demo cursor" src="robert-bye.jpg" style="width:100%" onclick="currentSlide(6)" alt="Waterfall">
+                <img class="demo cursor" src="robert-bye.jpg" style="width:100%;height:200px" onclick="currentSlide(6)" alt="Waterfall">
             </div>
         </div>
 
