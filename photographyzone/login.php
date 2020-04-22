@@ -11,7 +11,7 @@
         </head>
 
         <body>
-            <hr/>
+            
 
             <div>
 
@@ -60,7 +60,7 @@
                 <input class='MyButton' type="submit" value="Login" name="commit">
             </form>
             <div class="footer">
-                <p>Photography Zone | Adel Touati</p>
+                <p>Photography Zone | Adel Touati © Copyright 2020, All Rights Reserved</p>
             </div>
 
         </body>

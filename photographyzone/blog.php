@@ -11,7 +11,7 @@
         </head>
 
         <body>
-            <hr/>
+           
             <div>
                 <form>
 
@@ -86,7 +86,7 @@
 
             </ul>
             <div class="footer">
-                <p>Photography Zone | Adel Touati</p>
+                <p>Photography Zone | Adel Touati © Copyright 2020, All Rights Reserved</p>
             </div>
         </body>
 
