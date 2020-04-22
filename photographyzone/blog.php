@@ -3,7 +3,6 @@
 
     <!DOCTYPE html>
     <html>
-    <div id="container">
 
         <head>
             <title>Photography Zone</title>
@@ -11,7 +10,7 @@
         </head>
 
         <body>
-           
+          <div class="header">
             <div>
                 <form>
 
@@ -28,7 +27,7 @@
                 </form>
 
                 <img id="logo" src="logo.jpg" alt="logo" onclick="window.location.href='index.php'" />
-            </div>
+          </div>
             <div class="sub-nav cs401">
                 <ul>
                     <li class="spacer-401">&nbsp;</li>
