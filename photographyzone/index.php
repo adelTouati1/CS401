@@ -17,7 +17,7 @@ include_once('index.php');
     </head>
 
     <body>
-        <div class="container">
+        <div class="header">
 
             <hr/>
 
