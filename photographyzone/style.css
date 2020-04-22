@@ -4,7 +4,9 @@ body {
   margin: 0;
 
 }
-
+.header{
+  padding-top: 10px;
+}
 button {
   padding-top: 10px;
   margin-left: 10PX;
