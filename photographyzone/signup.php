@@ -3,15 +3,14 @@
 ?>
     <!DOCTYPE html>
     <html>
-    
 
-        <head>
-            <title>Photography Zone</title>
-            <link rel="stylesheet" type="text/css" href="style.css">
-        </head>
+    <head>
+        <title>Photography Zone</title>
+        <link rel="stylesheet" type="text/css" href="style.css">
+    </head>
 
-        <body>
-          <div class="header">  
+    <body>
+        <div class="header">
 
             <div>
 
@@ -21,7 +20,7 @@
                 </form>
 
                 <img id="logo" src="logo.jpg" alt="logo" onclick="window.location.href='index.php'" />
-          </div>
+            </div>
             <div class="sub-nav cs401">
                 <ul>
                     <li class="spacer-401">&nbsp;</li>
@@ -57,17 +56,17 @@
                     <br>
                     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
                     <script>
-                        $(document).ready(function(){
-                        $('.error').fadeIn().delay(10000).fadeOut();
-                            });
+                        $(document).ready(function() {
+                            $('.error').fadeIn().delay(10000).fadeOut();
+                        });
                     </script>
-                        <div class="error">
-                            <?php if (isset($_SESSION["error1"])) { ?>
-	                            <div class='errormessage'><?php print $_SESSION["error1"] ; ?></div>
-                                <?php } ?>
-                        </div>
-                       
-                    
+                    <div class="error">
+                        <?php if (isset($_SESSION["error1"])) { ?>
+                            <div class='errormessage'>
+                                <?php print $_SESSION["error1"] ; ?>
+                            </div>
+                            <?php } ?>
+                    </div>
 
                 </fieldset>
                 <input type="submit" class="MyButton" name="commit">
@@ -75,7 +74,7 @@
             <div class="footer">
                 <p>Photography Zone | Adel Touati © Copyright 2020, All Rights Reserved</p>
             </div>
-        </body>
+    </body>
     </div>
 
     </html>
