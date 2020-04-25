@@ -73,11 +73,11 @@
                                 <?php if (isset($_SESSION["mess"])){ ?>
                                 <script>
                                 $(document).ready(function() {
-                                    $('.errormessage').fadeIn().delay(10000).fadeOut();
+                                    $('.error').fadeIn().delay(10000).fadeOut();
                                 });
                              </script>
 
-                                <div class='errormessage'>
+                                <div class='error'>
                                     <?php print $_SESSION["mess"] ; ?>
                                 </div>
                                 <?php } ?>
