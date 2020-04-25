@@ -12,6 +12,7 @@ require_once('classes/Dao.php');
   if ($dao->checkEmailExists($email)) {
     $dao->message($message,$email);
     $_SESSION["mess"] = "Message sent";
+    header("Location:../contact.php");
     
   }else{
     header("Location:../contact.php");
