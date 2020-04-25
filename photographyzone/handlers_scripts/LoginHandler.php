@@ -6,7 +6,9 @@ $dao = new Dao();
 
 // Get email and password
 $email = htmlentities($_POST['email']);
+$_SESSION["email"] = $email;
 $password = $_POST['password'];
+$_SESSION["password"] = $password;
 if (! $dao->checkEmailExists($email)) {
     $_SESSION["error"] = "Email or password invalid";
     header("Location:../login.php");
