@@ -49,11 +49,19 @@
                     <input class='login<?php if (isset($_SESSION["error"])) { echo " inputError"; } ?>' type="password" id="inputlogin" name="password" required="required">
                     <br>
                     <?php  if (isset($_SESSION["AUTH"]) && $_SESSION["AUTH"]) {
-	header("Location:index.php");
-}
- if (isset($_SESSION["error"])) {
-	echo "<div class='error'>" .  $_SESSION["error"] . "</div>";
-} ?>
+	                    header("Location:index.php");
+                        } ?>
+                          <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+                    <script>
+                        $(document).ready(function(){
+                        $('.error').fadeIn().delay(10000).fadeOut();
+                            });
+                    </script>
+                        <div class="error">
+                            <?php if (isset($_SESSION["error"])) {
+	                            echo "<div class='error'>" .  $_SESSION["error"] . "</div>";
+                            } ?>
+                        </div>
                 </div>
                 <input class='MyButton' type="submit" value="Login" name="commit">
             </form>
