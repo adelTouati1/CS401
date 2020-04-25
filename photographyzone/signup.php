@@ -58,19 +58,26 @@
                     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
                     <div class='errormessage'>
                      
-                            <?php if (isset($_SESSION["error1"])) { ?>
-                                <script>
+                            <script>
                                 $(document).ready(function() {
                                     $('.errormessage').fadeIn().delay(10000).fadeOut();
                                 });
                              </script>
+
+                            <script>
+                                $(document).ready(function() {
+                                    $('.er').fadeIn().delay(10000).fadeOut();
+                                });
+                             </script>
+
+                            <?php if (isset($_SESSION["error1"])) { ?>
 
                                 <div class='errormessage'>
                                     <?php print $_SESSION["error1"] ; ?>
                                 </div>
                                 <?php } elseif (isset($_SESSION["mess"])){?>
 
-                                <div class='error'>
+                                <div class='er'>
                                     <?php print $_SESSION["mess"] ; ?>
                                 </div>
                                 <?php } ?>
