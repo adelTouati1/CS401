@@ -44,17 +44,29 @@
                 <fieldset>
 
                     <label for="firstname">First Name:</label>
-                    <input type="text" id="firstname" name="firstname">
+                    <input type="text" id="firstname" name="firstname" required="required">
                     <br>
                     <label for="lastname">Last Name:</label>
-                    <input type="text" id="lastname" name="lastname">
+                    <input type="text" id="lastname" name="lastname" required="required">
                     <br>
                     <label for="email">Email:</label>
-                    <input type="email" id="email" name="email">
+                    <input type="email" id="email" name="email" required="required">
                     <br>
                     <label for="password">Password:</label>
-                    <input type="password" id="password" name="password">
+                    <input type="password" id="password" name="password" required="required">
                     <br>
+                    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+                    <script>
+                        $(document).ready(function(){
+                        $('.error').fadeIn().delay(10000).fadeOut();
+                            });
+                    </script>
+                        @if (session('error1'))
+                            <div class="error">
+                                <p class="msg"> {{ session('error1') }}</p>
+                            </div>
+                        @endif
+                    
 
                 </fieldset>
                 <input type="submit" class="MyButton" name="commit">
