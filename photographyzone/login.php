@@ -55,7 +55,7 @@
                           <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
                     <script>
                         $(document).ready(function(){
-                        $('.error').fadeIn().delay(10000).fadeOut();
+                        $('.error').fadeIn().delay(5000).fadeOut();
                             });
                     </script>
                         <div class="error">
