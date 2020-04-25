@@ -60,13 +60,13 @@
                             $('.errormessage').fadeIn().delay(10000).fadeOut();
                         });
                     </script>
-                    <div class="errormessage">
+                    
                         <?php if (isset($_SESSION["error1"])) { ?>
                             <div class='errormessage'>
                                 <?php print $_SESSION["error1"] ; ?>
                             </div>
                             <?php } ?>
-                    </div>
+                    
 
                 </fieldset>
                 <input type="submit" class="MyButton" name="commit">
