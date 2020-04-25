@@ -45,11 +45,11 @@
                 <div align="center">
                 <?php isset($_POST['email']) ? $e = $_POST['email'] : $e = ''; ?>
                     <label for="email">Email:</label>
-                    <input class='login<?php if (isset($_SESSION["error"])) { echo " inputError"; } ?>' type="email" id="inputlogin" name="email" required="required">
+                    <input class='login<?php if (isset($_SESSION["error"])) { echo " inputError"; } ?>' type="email" id="inputlogin" name="email" value="<?php echo $e; ?>" required="required">
                     <br>
                     <?php isset($_POST['password']) ? $p = $_POST['password'] : $p = ''; ?>
                     <label for="password">Password:</label>
-                    <input class='login<?php if (isset($_SESSION["error"])) { echo " inputError"; } ?>' type="password" id="inputlogin" name="password" required="required">
+                    <input class='login<?php if (isset($_SESSION["error"])) { echo " inputError"; } ?>' type="password" id="inputlogin" name="password" value="<?php echo $p; ?>" required="required">
                     <br>
                     <?php  if (isset($_SESSION["AUTH"]) && $_SESSION["AUTH"]) {
 	                    header("Location:index.php");
