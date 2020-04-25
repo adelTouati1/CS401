@@ -55,18 +55,18 @@
                     <input type="password" id="password" name="password" required="required">
                     <br>
                     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-                    <script>
-                        $(document).ready(function() {
+                    <div class='errormessage'>
+                        <script>
+                         $(document).ready(function() {
                             $('.errormessage').fadeIn().delay(10000).fadeOut();
-                        });
-                    </script>
-                        <?php if (isset($_SESSION["error1"])) { ?>
-                            <div class='errormessage'>
-                            <i class="fa fa-times-circle"></i>
-                                <?php print $_SESSION["error1"] ; ?>
-                            </div>
-                            <?php } ?>
-                    
+                         });
+                        </script>
+                            <?php if (isset($_SESSION["error1"])) { ?>
+                                <div class='errormessage'>
+                                    <?php print $_SESSION["error1"] ; ?>
+                                </div>
+                                <?php } ?>
+                    </div>
 
                 </fieldset>
                 <input type="submit" class="MyButton" name="commit">
