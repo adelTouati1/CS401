@@ -14,7 +14,6 @@ include_once('index.php');
     <head>
         <title>Photography Zone</title>
         <link rel="stylesheet" type="text/css" href="style.css">
-        <link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
     </head>
 
     <body>
