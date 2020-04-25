@@ -10,7 +10,7 @@ require_once('classes/Dao.php');
   if ($dao->checkEmailExists($email)) {
     $dao->message($message,$email);
     $_SESSION["mess"] = "Message sent";
-    header("Location:../index.php");
+    
   }else{
     header("Location:../signup.php");
   } 
