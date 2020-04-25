@@ -61,11 +61,11 @@
                         $('.error').fadeIn().delay(10000).fadeOut();
                             });
                     </script>
-                            <div class="error">
+                        <div class="error">
                             <?php if (isset($_SESSION["error"])) {
 	                            echo "<div class='error'>" .  $_SESSION["error"] . "</div>";
                             } ?>
-                            </div>
+                        </div>
                        
                     
 
