@@ -12,6 +12,7 @@ require_once('classes/Dao.php');
     $_SESSION["mess"] = "Message sent";
     
   }else{
+    header("Location:../contact.php");
     $_SESSION["mess"] = "Sign up to be able to contact us!";
   } 
   
