@@ -43,11 +43,11 @@
             </div>
             <form accept-charset="UTF-8" action="handlers_scripts/LoginHandler.php" id="login-form" method="post">
                 <div align="center">
-                <?php isset($_POST['email']) ? $e = $_POST['email'] : $e = ''; ?>
+                <?php if (isset($_SESSION['email'])){$e = $_SESSION['email'];}  ?>
                     <label for="email">Email:</label>
                     <input class='login<?php if (isset($_SESSION["error"])) { echo " inputError"; } ?>' type="email" id="inputlogin" name="email" value="<?php echo $e; ?>" required="required">
                     <br>
-                    <?php isset($_POST['password']) ? $p = $_POST['password'] : $p = ''; ?>
+                    <?php if (isset($_SESSION['password'])){$p = $_SESSION['password'];}  ?>
                     <label for="password">Password:</label>
                     <input class='login<?php if (isset($_SESSION["error"])) { echo " inputError"; } ?>' type="password" id="inputlogin" name="password" value="<?php echo $p; ?>" required="required">
                     <br>
