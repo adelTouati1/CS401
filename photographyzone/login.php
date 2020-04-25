@@ -62,6 +62,7 @@
 	                            echo "<div class='error'>" .  $_SESSION["error"] . "</div>";
                             } ?>
                         </div>
+                        
                 </div>
                 <input class='MyButton' type="submit" value="Login" name="commit">
             </form>
