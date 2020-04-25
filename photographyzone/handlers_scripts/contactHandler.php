@@ -13,6 +13,7 @@ require_once('classes/Dao.php');
     
   }else{
     header("Location:../signup.php");
+    $_SESSION["mess"] = "Sign up to be able to contact us!";
   } 
   
 

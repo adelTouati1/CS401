@@ -66,7 +66,11 @@
                                 <div class='errormessage'>
                                     <?php print $_SESSION["error1"] ; ?>
                                 </div>
-                                <?php } ?>
+                                <?php } 
+                                if (isset($_SESSION["mess"])){
+                         
+                                    echo "<div class='error'>" .  $_SESSION["mess"] . "</div>";
+                                }?>
                     </div>
                 </div>
                 </fieldset>
