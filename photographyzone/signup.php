@@ -58,10 +58,10 @@
                     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
                     <script>
                         $(document).ready(function(){
-                        $('.error').fadeIn().delay(10000).fadeOut();
+                        $('.errormessage').fadeIn().delay(10000).fadeOut();
                             });
                     </script>
-                        <div class="error">
+                        <div class="errormessage">
                             <?php if (isset($_SESSION["error1"])) {
 	                            echo "<div class='errormessage'>" .  $_SESSION["error1"] . "</div>";
                             } ?>
