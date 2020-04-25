@@ -16,6 +16,7 @@ require_once('classes/Dao.php');
  
 
   $password = $_POST["password"];
+  $_SESSION["password"] = $password;
   
   if ($dao->checkEmailExists($email)) {
     $_SESSION["error1"] = "Email already taken!";

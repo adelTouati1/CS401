@@ -43,17 +43,21 @@
             <form action="/handlers_scripts/SignupHandler.php" id="register" method="post">
                 <fieldset>
                 <div align="center">
+                    <?php if (isset($_SESSION['firstname'])){$f = $_SESSION['firstname'];}  ?>
                     <label for="firstname">First Name:</label>
-                    <input type="text" id="firstname" name="firstname" required="required">
+                    <input type="text" id="firstname" name="firstname" value="<?php echo $f; ?>" required="required">
                     <br>
+                    <?php if (isset($_SESSION['lastname'])){$l = $_SESSION['lastname'];}  ?>
                     <label for="lastname">Last Name: </label>
-                    <input type="text" id="lastname" name="lastname" required="required">
+                    <input type="text" id="lastname" name="lastname" value="<?php echo $l; ?>" required="required">
                     <br>
+                    <?php if (isset($_SESSION['email'])){$e = $_SESSION['email'];}  ?>
                     <label for="email">Email:</label>
-                    <input type="email" id="email" name="email" required="required">
+                    <input type="email" id="email" name="email" value="<?php echo $e; ?>" required="required">
                     <br>
+                    <?php if (isset($_SESSION['password'])){$p = $_SESSION['password'];}  ?>
                     <label for="password">Password:  </label>
-                    <input type="password" id="password" name="password" required="required">
+                    <input type="password" id="password" name="password" value="<?php echo $p; ?>" required="required">
                     <br>
                     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
                     <div class='errormessage'>

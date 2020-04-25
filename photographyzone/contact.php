@@ -50,13 +50,14 @@
             </div>
             <form accept-charset="UTF-8" action="handlers_scripts/contactHandler.php" id="contact-form" method="post">
                 <fieldset>
-
+                    <?php if (isset($_SESSION['message'])){$m = $_SESSION['message'];}  ?>
                     <label for="message">Message:</label>
                     <br>
-                    <textarea type="text" rows="5" cols="80" id="message" name="message" required="required"></textarea>
+                    <textarea type="text" rows="5" cols="80" id="message" name="message" required="required"><?php echo $m; ?> </textarea>
                     <br>
+                    <?php if (isset($_SESSION['email'])){$e = $_SESSION['email'];}  ?>
                     <label for="email">Email:</label>
-                    <input type="email" id="email" name="email" required="required">
+                    <input type="email" id="email" name="email" value="<?php echo $e; ?>" required="required">
                     <br>
 
                     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
