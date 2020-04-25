@@ -62,8 +62,8 @@
                             });
                     </script>
                         <div class="error">
-                            <?php if (isset($_SESSION["error"])) {
-	                            echo "<div class='error'>" .  $_SESSION["error"] . "</div>";
+                            <?php if (isset($_SESSION["error1"])) {
+	                            echo "<div class='error'>" .  $_SESSION["error1"] . "</div>";
                             } ?>
                         </div>
                        
