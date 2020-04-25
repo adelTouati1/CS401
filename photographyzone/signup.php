@@ -61,11 +61,12 @@
                         $('.error').fadeIn().delay(10000).fadeOut();
                             });
                     </script>
-                        @if (session('error1'))
                             <div class="error">
-                                <p class="msg"> {{ session('error1') }}</p>
+                            <?php if (isset($_SESSION["error"])) {
+	                            echo "<div class='error'>" .  $_SESSION["error"] . "</div>";
+                            } ?>
                             </div>
-                        @endif
+                       
                     
 
                 </fieldset>
