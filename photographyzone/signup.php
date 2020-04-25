@@ -41,14 +41,14 @@
             </div>
             <form action="/handlers_scripts/SignupHandler.php" id="register" method="post">
                 <fieldset>
-
+                <div align="center">
                     <label for="firstname">First Name:</label>
                     <input type="text" id="firstname" name="firstname" required="required">
                     <br>
                     <label for="lastname">Last Name: </label>
                     <input type="text" id="lastname" name="lastname" required="required">
                     <br>
-                    <label for="email">Email:     </label>
+                    <label for="email">Email:</label>
                     <input type="email" id="email" name="email" required="required">
                     <br>
                     <label for="password">Password:  </label>
@@ -67,7 +67,7 @@
                                 </div>
                                 <?php } ?>
                     </div>
-
+                </div>
                 </fieldset>
                 <input type="submit" class="MyButton" name="commit">
             </form>
