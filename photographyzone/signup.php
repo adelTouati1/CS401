@@ -60,9 +60,9 @@
                             $('.errormessage').fadeIn().delay(10000).fadeOut();
                         });
                     </script>
-                    
                         <?php if (isset($_SESSION["error1"])) { ?>
                             <div class='errormessage'>
+                            <i class="fa fa-times-circle"></i>
                                 <?php print $_SESSION["error1"] ; ?>
                             </div>
                             <?php } ?>
