@@ -63,7 +63,7 @@
                     </script>
                         <div class="error">
                             <?php if (isset($_SESSION["error1"])) {
-	                            echo "<div class='error'>" .  $_SESSION["error1"] . "</div>";
+	                            echo "<div class='errormessage'>" .  $_SESSION["error1"] . "</div>";
                             } ?>
                         </div>
                        
