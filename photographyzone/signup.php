@@ -6,6 +6,7 @@
 
     <head>
         <title>Photography Zone</title>
+        <link rel="icon" href="favicon.png">
         <link rel="stylesheet" type="text/css" href="style.css">
     </head>
 
