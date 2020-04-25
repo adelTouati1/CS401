@@ -68,14 +68,7 @@
                                 <div class='errormessage'>
                                     <?php print $_SESSION["error1"] ; ?>
                                 </div>
-                                <?php } ?>
-
-                                <?php if (isset($_SESSION["mess"])){ ?>
-                                <script>
-                                $(document).ready(function() {
-                                    $('.error').fadeIn().delay(10000).fadeOut();
-                                });
-                             </script>
+                                <?php } elseif (isset($_SESSION["mess"])){?>
 
                                 <div class='error'>
                                     <?php print $_SESSION["mess"] ; ?>
