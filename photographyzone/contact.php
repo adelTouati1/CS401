@@ -53,15 +53,26 @@
 
                     <label for="message">Message:</label>
                     <br>
-                    <textarea type="text" rows="5" cols="80" id="message" name="message"></textarea>
+                    <textarea type="text" rows="5" cols="80" id="message" name="message" required="required"></textarea>
                     <br>
                     <label for="email">Email:</label>
-                    <input type="email" id="email" name="email">
+                    <input type="email" id="email" name="email" required="required">
                     <br>
-                    <?php  if (isset($_SESSION["mess"])){
-	header("Location:index.php");
-}
- ?>
+
+                    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+                    <script>
+                        $(document).ready(function(){
+                        $('.error').fadeIn().delay(10000).fadeOut();
+                            });
+                    </script>
+                        <div class="error">
+                            <?php if (isset($_SESSION["mess"])){
+                         
+                         echo "<div class='error'>" .  $_SESSION["mess"] . "</div>";
+                     } ?>
+                        </div>
+
+                        
 
                 </fieldset>
                 <input class="MyButton" type="submit" value="Send" name="commit" />
