@@ -60,25 +60,20 @@
                     <input type="password" id="password" name="password" value="<?php echo $p; ?>" required="required">
                     <br>
                     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-                    <div class='errormessage'>
-                     
+                    <?php if (isset($_SESSION["error1"])) { ?>
+                        <div class='errormessage'>
                             <script>
                                 $(document).ready(function() {
                                     $('.errormessage').fadeIn().delay(5000).fadeOut();
                                 });
                              </script>
-
-
-                            <?php if (isset($_SESSION["error1"])) { ?>
-
                                 <div class='errormessage'>
                                     <?php print $_SESSION["error1"] ; ?>
                                 </div>
                                 
-                                <?php } ?>
-
-                             
-                    </div>
+                                      
+                        </div>
+                    <?php } ?> 
                 </div>
                 </fieldset>
                 <input type="submit" class="MyButton" name="commit">
