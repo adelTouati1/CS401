@@ -61,17 +61,20 @@
                     <br>
 
                     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-                    <script>
-                        $(document).ready(function(){
-                        $('.error').fadeIn().delay(5000).fadeOut();
-                            });
-                    </script>
-                        <div class="error">
-                            <?php if (isset($_SESSION["mess"])){
-                         
-                         echo "<div class='errormessage'>" .  $_SESSION["mess"] . "</div>";
-                     } ?>
+                    <?php if (isset($_SESSION["mess"])) { ?>
+                        <div class='error'>
+                            <script>
+                                $(document).ready(function() {
+                                    $('.error').fadeIn().delay(5000).fadeOut();
+                                });
+                             </script>
+                                <div class='errormessage'>
+                                    <?php print $_SESSION["mess"] ; ?>
+                                </div>
+                                
+                                      
                         </div>
+                    <?php } ?>     
 
 
 

@@ -54,17 +54,21 @@
                     <?php  if (isset($_SESSION["AUTH"]) && $_SESSION["AUTH"]) {
 	                    header("Location:index.php");
                         } ?>
-                          <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-                    <script>
-                        $(document).ready(function(){
-                        $('.error').fadeIn().delay(5000).fadeOut();
-                            });
-                    </script>
-                        <div class="error">
-                            <?php if (isset($_SESSION["error"])) {
-	                            echo "<div class='errormessage'>" .  $_SESSION["error"] . "</div>";
-                            } ?>
+                    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+                    <?php if (isset($_SESSION["error"])) { ?>
+                        <div class='error'>
+                            <script>
+                                $(document).ready(function() {
+                                    $('.error').fadeIn().delay(5000).fadeOut();
+                                });
+                             </script>
+                                <div class='errormessage'>
+                                    <?php print $_SESSION["error"] ; ?>
+                                </div>
+                                
+                                      
                         </div>
+                    <?php } ?>  
                         
                 </div>
                 <input class='MyButton' type="submit" value="Login" name="commit">
