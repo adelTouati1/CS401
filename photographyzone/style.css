@@ -43,13 +43,15 @@ body {
   padding: 32px;
 }
 
-.bt {
+button.bt {
   border: none;
   outline: none;
   padding: 10px 16px;
   background-color: #f1f1f1;
   cursor: pointer;
   font-size: 18px;
+  float: none;
+  text-align: center;
 }
 
 .bt:hover {
@@ -65,7 +67,7 @@ button {
   margin-left: 10PX;
   margin-top: 10px;
   font-size: 20px;
-  text-align: center;
+  float: right;
 }
 .errormessage{
   margin: 2px 0;
