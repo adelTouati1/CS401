@@ -7,6 +7,30 @@ body {
 .header{
   padding-top: 10px;
 }
+
+.box{
+  box-sizing: border-box;
+}
+.rowp {
+  display: -ms-flexbox; /* IE 10 */
+  display: flex;
+  -ms-flex-wrap: wrap; /* IE 10 */
+  flex-wrap: wrap;
+  padding: 0 4px;
+}
+
+/* Create two equal columns that sits next to each other */
+.columnp {
+  -ms-flex: 50%; /* IE 10 */
+  flex: 50%;
+  padding: 0 4px;
+}
+
+.columnp img {
+  margin-top: 8px;
+  vertical-align: middle;
+}
+
 button {
   padding-top: 10px;
   margin-left: 10PX;

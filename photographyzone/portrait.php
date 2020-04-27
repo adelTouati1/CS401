@@ -3,16 +3,15 @@
 
     <!DOCTYPE html>
     <html>
-    
 
-        <head>
-            <title>Photography Zone</title>
-            <link rel="icon" href="favicon.png">
-            <link rel="stylesheet" type="text/css" href="style.css">
-        </head>
+    <head>
+        <title>Photography Zone</title>
+        <link rel="icon" href="favicon.png">
+        <link rel="stylesheet" type="text/css" href="style.css">
+    </head>
 
-        <body>
-          <div class="header">
+    <body>
+        <div class="header">
             <div>
                 <form>
 
@@ -29,7 +28,7 @@
                 </form>
 
                 <img id="logo" src="logo.jpg" alt="logo" onclick="window.location.href='index.php'" />
-          </div>
+            </div>
             <div class="sub-nav cs401">
                 <ul>
                     <li class="spacer-401">&nbsp;</li>
@@ -48,29 +47,68 @@
 
                 </ul>
             </div>
-
-            <div class="row">
-                <div class="column">
-                    <img id="photo" src="photo1.jpeg" alt="photo" style="width:100%">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed in interdum leo. Nullam tempor justo vel tellus facilisis, vitae semper nulla finibus. Nulla laoreet aliquam erat, in iaculis velit consequat eget. Sed nec semper justo. Aliquam erat volutpat. Nulla vulputate risus sagittis congue porttitor. Pellentesque interdum libero magna, sit amet condimentum lacus rhoncus a. </p>
-
+        <div class ="box">
+            <div class="rowp">
+                <div class="columnp">
+                    <img src="/images/1.jpg" style="width:100%">
+                    <img src="/images/2.jpg" style="width:100%">
+                    <img src="/images/3.jpg" style="width:100%">
+                    <img src="/images/4.jpg" style="width:100%">
+                    <img src="/images/5.jpg" style="width:100%">
+                    <img src="/images/6.jpg" style="width:100%">
+                    <img src="/images/7.jpg" style="width:100%">
                 </div>
-                <div class="column">
-                    <img id="photo" src="photo2.jpg" alt="photo" style="width:100%">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed in interdum leo. Nullam tempor justo vel tellus facilisis, vitae semper nulla finibus. Nulla laoreet aliquam erat, in iaculis velit consequat eget. Sed nec semper justo. Aliquam erat volutpat. Nulla vulputate risus sagittis congue porttitor. Pellentesque interdum libero magna, sit amet condimentum lacus rhoncus a. </p>
-
+                <div class="columnp">
+                    <img src="/images/8.jpg" style="width:100%">
+                    <img src="/images/9.jpg" style="width:100%">
+                    <img src="/images/10.jpg" style="width:100%">
+                    <img src="/images/11.jpg" style="width:100%">
+                    <img src="/images/12.jpg" style="width:100%">
+                    <img src="/images/13.jpg" style="width:100%">
                 </div>
-                <div class="column">
-                    <img id="photo" src="photo3.jpg" alt="photo" style="width:100%">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed in interdum leo. Nullam tempor justo vel tellus facilisis, vitae semper nulla finibus. Nulla laoreet aliquam erat, in iaculis velit consequat eget. Sed nec semper justo. Aliquam erat volutpat. Nulla vulputate risus sagittis congue porttitor. Pellentesque interdum libero magna, sit amet condimentum lacus rhoncus a. </p>
+                <div class="columnp">
+                    <img src="/images/14.jpg" style="width:100%">
+                    <img src="/images/15.jpg" style="width:100%">
+                    <img src="/images/16.jpg" style="width:100%">
+                    <img src="/images/17.jpg" style="width:100%">
+                    <img src="/images/18.jpg" style="width:100%">
+                    <img src="/images/19.jpg" style="width:100%">
+                    <img src="/images/20.jpg" style="width:100%">
+                </div>
+                <div class="columnp">
+                    <img src="/images/21.jpg" style="width:100%">
+                    <img src="/images/22.jpg" style="width:100%">
+                    <img src="/images/23.jpg" style="width:100%">
+                    <img src="/images/24.jpg" style="width:100%">
+                    <img src="/images/25.jpg" style="width:100%">
+                    <img src="/images/26.jpg" style="width:100%">
+                    <img src="/images/27.jpg" style="width:100%">
                 </div>
             </div>
+        </div>
+            <script>
+                // Get the elements with class="column"
+                var elements = document.getElementsByClassName("columnp");
+
+                // Declare a loop variable
+                var i;
+
+                // Four images side by side
+                function four() {
+                    for (i = 0; i < elements.length; i++) {
+                        elements[i].style.msFlex = "25%"; // IE10
+                        elements[i].style.flex = "25%";
+                    }
+                }
+
+           
+            </script>
 
             </ul>
             <div class="footer">
                 <p>Photography Zone | Adel Touati © Copyright 2020, All Rights Reserved</p>
             </div>
-        </body>
+    </body>
     </div>
 
     </html>
