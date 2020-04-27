@@ -47,12 +47,14 @@
 
                 </ul>
             </div>
-            <div class="onetofour" id="sl">
+
+        </div>
+        
+        <div class="onetofour" id="sl">
                 <button class="bt" onclick="one()">1</button>
                 <button class="bt" onclick="two()">2</button>
                 <button class="bt active" onclick="four()">4</button>
-            </div>  
-        </div>
+        </div>  
 
         <div class ="box">
             <div class="rowp">
