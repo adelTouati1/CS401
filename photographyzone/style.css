@@ -65,7 +65,7 @@ button {
   margin-left: 10PX;
   margin-top: 10px;
   font-size: 20px;
-  float: right;
+  text-align: center;
 }
 .errormessage{
   margin: 2px 0;
