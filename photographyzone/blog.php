@@ -52,7 +52,7 @@
             <div class="row">
                 <div class="column">
                     <img id="photo" src="edu1.jpg" alt="photo" style="width:100%">
-                    <h3>Use the Rule of Thirds </h3>
+                    <h3 style="text-align:center">Use the Rule of Thirds </h3>
                     <p>This rule helps you take eye-catching pictures by using one of the most effective rules of composition.
 
                         <br>If you want to take pictures that have a “wow” factor built in them, the Rule of Thirds is the composition secret you need to take advantage of!
@@ -64,7 +64,7 @@
                 </div>
                 <div class="column">
                     <img id="photo" src="edu2.jpg" alt="photo" style="width:100%">
-                    <h3>Avoid Camera Shake </h3>
+                    <h3 style="text-align:center">Avoid Camera Shake </h3>
                     <p>Camera shake or blur is something that can plague any photographer and here are some ways to avoid it.
 
                     <br>First, you need to learn how to hold your camera correctly; use both hands, one around the body and one around the lens and hold the camera close to your body for support.
@@ -80,7 +80,7 @@
                 </div>
                 <div class="column">
                     <img id="photo" src="edu3.jpg" alt="photo" style="width:100%">
-                    <h3>Use a Polarizing Filter</h3>
+                    <h3 style="text-align:center">Use a Polarizing Filter</h3>
                     <p>If you can only buy one filter for your lens, make it a polarizer.
 
                     <br>The recommended type of polarizer is circular because these allow your camera to use TTL (through the lens) metering such as auto exposure.
@@ -92,20 +92,20 @@
             <h1>Photography Insperation</h1>
             <div class="row">
                 <div class="column">
-                    <img id="photo" src="insp1.jpeg" alt="photo" style="width:100%">
-                    <h3>Go on a photo walk</h3>
+                    <img id="photo" src="insp3.jpg" alt="photo" style="width:100%">
+                    <h3 style="text-align:center">Go on a photo walk</h3>
                     <p>Attend a photo walk and explore new places with your camera. They’re regularly organized in many places around the world, so you’ll never run out of opportunities. To join, all you have to do is search for events online and sign up. And the best part? Most of them are free! Just remember that you’ll be walking a lot, so pack light and only bring the equipment you need.</p>
 
                 </div>
                 <div class="column">
-                    <img id="photo" src="insp2.jpg" alt="photo" style="width:100%">
-                    <h3>Take photos of strangers on the streets</h3>
+                    <img id="photo" src="insp1.jpg" alt="photo" style="width:100%">
+                    <h3 style="text-align:center">Take photos of strangers on the streets</h3>
                     <p>Challenge yourself to approach strangers and ask them if you could take a photo. If they agree, you can suggest a pose or ask them to do something interesting. Alternatively, be a fly on the wall and take candid photos of people documentary-style. </p>
 
                 </div>
                 <div class="column">
-                    <img id="photo" src="insp3.jpg" alt="photo" style="width:100%">
-                    <h3>Express yourself with self portraits</h3>
+                    <img id="photo" src="insp2.jpg" alt="photo" style="width:100%">
+                    <h3 style="text-align:center">Express yourself with self portraits</h3>
                     <p>Forget selfies and learn to create proper self-portraits using a tripod and a camera. Once you find the right location, set your device to self-timer mode; if you don’t like using a timer, you can also activate it using a remote control. When you’re ready, press the shutter, walk to your position, and pose. If you want self-portraits on the go, you can also take a photo of yourself in front of a mirror.</p>
                 </div>
             </div>
