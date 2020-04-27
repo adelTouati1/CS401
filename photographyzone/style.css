@@ -30,7 +30,28 @@ body {
   margin-top: 8px;
   vertical-align: middle;
 }
+.onetofour {
+  text-align: center;
+  padding: 32px;
+}
 
+.bt {
+  border: none;
+  outline: none;
+  padding: 10px 16px;
+  background-color: #f1f1f1;
+  cursor: pointer;
+  font-size: 18px;
+}
+
+.bt:hover {
+  background-color: #ddd;
+}
+
+.bt.active {
+  background-color: #666;
+  color: white;
+}
 button {
   padding-top: 10px;
   margin-left: 10PX;
