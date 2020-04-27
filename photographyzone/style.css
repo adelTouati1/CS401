@@ -11,6 +11,10 @@ body {
 .box{
   box-sizing: border-box;
 }
+
+.box,.onetofour{
+  position: relative;
+}
 .rowp {
   display: -ms-flexbox; /* IE 10 */
   display: flex;
