@@ -47,13 +47,13 @@
 
                 </ul>
             </div>
-        
+    <div class="onetofour" id="sl">
+        <button class="bt" onclick="one()">1</button>
+        <button class="bt" onclick="two()">2</button>
+        <button class="bt active" onclick="four()">4</button>
+    </div>  
+
         <div class ="box">
-            <div class="onetofour" id="sl">
-                <button class="bt" onclick="one()">1</button>
-                <button class="bt" onclick="two()">2</button>
-                <button class="bt active" onclick="four()">4</button>
-            </div>  
             <div class="rowp">
                 <div class="columnp">
                     <img src="/images/1.jpg" style="width:100%">
