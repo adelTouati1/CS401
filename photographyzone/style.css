@@ -13,7 +13,7 @@ body {
 }
 
 .box,.onetofour{
-  position: relative;
+  position: absolute;
 }
 .rowp {
   display: -ms-flexbox; /* IE 10 */
