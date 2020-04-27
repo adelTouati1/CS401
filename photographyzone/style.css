@@ -62,13 +62,7 @@ button.bt {
   background-color: #666;
   color: white;
 }
-button {
-  padding-top: 10px;
-  margin-left: 10PX;
-  margin-top: 10px;
-  font-size: 20px;
-  float: right;
-}
+
 .errormessage{
   margin: 2px 0;
   padding: 2px;
