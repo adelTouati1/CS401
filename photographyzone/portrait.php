@@ -65,6 +65,7 @@
                     <img src="/images/11.jpg" style="width:100%">
                     <img src="/images/12.jpg" style="width:100%">
                     <img src="/images/13.jpg" style="width:100%">
+                    <img src="/images/27.jpg" style="width:100%">
                 </div>
                 <div class="columnp">
                     <img src="/images/14.jpg" style="width:100%">
@@ -82,7 +83,7 @@
                     <img src="/images/24.jpg" style="width:100%">
                     <img src="/images/25.jpg" style="width:100%">
                     <img src="/images/26.jpg" style="width:100%">
-                    <img src="/images/27.jpg" style="width:100%">
+                   
                 </div>
             </div>
         </div>
